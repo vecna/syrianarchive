@@ -4,7 +4,6 @@ from django.contrib.admin import widgets
 from datetime import datetime
 from django.core.validators import MinValueValidator, MaxValueValidator
 import time
-import django_filters
 from django.db.models.signals import post_save
 from djgeojson.fields import PointField, PolygonField
 import json

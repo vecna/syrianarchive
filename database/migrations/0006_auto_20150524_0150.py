@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=250)),
                 ('name_en', models.CharField(max_length=250, null=True)),
                 ('name_ar', models.CharField(max_length=250, null=True)),
-                ('description', models.CharField(max_length=8000, null=True, blank=True)),
+                ('description', models.CharField(max_length=2000, null=True, blank=True)),
                 ('description_en', models.CharField(max_length=8000, null=True, blank=True)),
                 ('description_ar', models.CharField(max_length=8000, null=True, blank=True)),
                 ('image', models.ImageField(null=True, upload_to=b'collection_images', blank=True)),

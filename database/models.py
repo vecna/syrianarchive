@@ -63,7 +63,7 @@ class ViolationType(models.Model):
 
 class Collection(models.Model):
     name            = models.CharField( max_length = 250)
-    description     = models.CharField( max_length = 8000, null = True, blank = True)
+    description     = models.CharField( max_length = 2000, null = True, blank = True)
     image           = models.ImageField(upload_to="collection_images", null = True, blank = True)
 
     def __unicode__(self):

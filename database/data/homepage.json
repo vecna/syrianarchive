@@ -1,0 +1,24 @@
+[
+{
+    "fields": {
+        "name": "Welcome to the Syrian Archive | Beta",
+        "description_ar": "<p>&quot;\u0627\u0644\u0623\u0631\u0634\u064a\u0641 \u0627\u0644\u0633\u0648\u0631\u064a&quot; \u0645\u0628\u0627\u062f\u0631\u0629 \u0633\u0648\u0631\u064a\u0651\u0629 \u0623\u0637\u0644\u0642\u0647\u0627 \u0646\u0627\u0634\u0637\u0648\u0646 \u062d\u0642\u0648\u0642\u064a\u0648\u0646 \u0648\u0627\u062e\u062a\u0635\u0627\u0635\u064a\u0648 \u0623\u0631\u0634\u0641\u0629 \u0648\u062a\u0642\u0646\u064a\u0648\u0646 \u0648\u0635\u062d\u0641\u064a\u0648\u0646 \u0644\u0623\u0631\u0634\u0641\u0629 \u0627\u0646\u062a\u0647\u0627\u0643\u0627\u062a \u062d\u0642\u0648\u0642 \u0627\u0644\u0625\u0646\u0633\u0627\u0646.</p>\r\n\r\n<p>\u064a\u0642\u0648\u0645 &quot;\u0627\u0644\u0623\u0631\u0634\u064a\u0641 \u0627\u0644\u0633\u0648\u0631\u064a&quot; \u0628\u062d\u0641\u0638 \u0648\u0641\u0647\u0631\u0633\u0629 \u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0627\u0644\u0645\u062a\u0639\u0644\u0642\u0629 \u0628\u0627\u0646\u062a\u0647\u0627\u0643\u0627\u062a \u062d\u0642\u0648\u0642 \u0627\u0644\u0625\u0646\u0633\u0627\u0646 \u0645\u0646 \u0623\u064a \u062c\u0647\u0629 \u0643\u0627\u0646\u062a\u060c \u0628\u0645\u0627 \u064a\u0644\u0627\u0626\u0645 \u0627\u062d\u062a\u064a\u0627\u062c\u0627\u062a \u0627\u0644\u0645\u0648\u062b\u0651\u0642\u064a\u0646 \u0648\u0627\u0644\u0625\u0639\u0644\u0627\u0645\u064a\u064a\u0646 \u0641\u064a \u0633\u0648\u0631\u064a\u0627\u060c \u0628\u0627\u0644\u0625\u0636\u0627\u0641\u0629 \u0644\u062c\u0639\u0644 \u062a\u0644\u0643 \u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0645\u0646\u0638\u0651\u0645\u0629 \u0648\u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645 \u0645\u0646 \u0642\u0628\u0644 \u0627\u0644\u0645\u062d\u0642\u0651\u0642\u064a\u0646 \u0648\u0627\u0644\u0645\u062d\u0627\u0645\u064a\u064a\u0646 \u0648\u0627\u0644\u0635\u062d\u0641\u064a\u064a\u0646 \u0648\u0627\u0644\u0628\u0627\u062d\u062b\u064a\u0646\u060c \u0628\u063a\u0631\u0636 \u062a\u0639\u0632\u064a\u0632 \u0627\u0644\u062c\u0647\u0648\u062f \u0627\u0644\u062a\u064a \u062a\u0642\u0648\u062f \u0625\u0644\u0649 \u0627\u0644\u0645\u0633\u0627\u0621\u0644\u0629 \u0648\u0628\u0646\u0627\u0621 \u0627\u0644\u0633\u0644\u0627\u0645 \u0627\u0644\u0645\u0633\u062a\u062f\u0627\u0645.</p>\r\n",
+        "name_ar": "\u0623\u0647\u0644\u0627\u064b \u0628\u0643\u0645 \u0641\u064a \u0645\u0648\u0642\u0639 \"\u0627\u0644\u0623\u0631\u0634\u064a\u0641 \u0627\u0644\u0633\u0648\u0631\u064a\" | \u0625\u0635\u062f\u0627\u0631 \u0628\u0650\u064a\u062a\u064e\u0627",
+        "description_en": "<p>The Syrian Archive is an initiative launched by a collective of human rights activists dedicated to preserving open source documentation relating to human rights violations and other crimes committed by all sides during the conflict in Syria.</p>\r\n\r\n<p><br />\r\nOur goal is to preserve the most valuable material to ensure it is organized and accessible for use by current researchers, journalists and others with an interest in the conflict as well as to facilitate the work of future historians and investigators involved in transitional justice and accountability efforts.</p>\r\n",
+        "name_en": "Welcome to the Syrian Archive | Beta",
+        "description": "<p>The Syrian Archive is an initiative launched by a collective of human rights activists dedicated to preserving open source documentation relating to human rights violations and other crimes committed by all sides during the conflict in Syria.</p>\r\n\r\n<p><br />\r\nOur goal is to preserve the most valuable material to ensure it is organized and accessible for use by current researchers, journalists and others with an interest in the conflict as well as to facilitate the work of future historians and investigators involved in transitional justice and accountability efforts.</p>\r\n"
+    },
+    "model": "homepage.section",
+    "pk": 10
+},
+{
+    "fields": {
+        "image": "",
+        "link": "//media.syrianarchive.org",
+        "name": "Media Archive",
+        "description": ""
+    },
+    "model": "homepage.frontpagelink",
+    "pk": 1
+}
+]

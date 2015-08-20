@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-13 10:39+0000\n"
+"POT-Creation-Date: 2015-08-20 10:12+0000\n"
 "PO-Revision-Date: 2015-04-03 19:21+0000\n"
 "Last-Translator:   <sadh@fdsauh.dsa>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -150,7 +150,7 @@ msgstr "الأحداث المرتبطة"
 #: database/templates/database/index.html:12
 #: database/templates/database/loginrequired.html:4
 #: database/templates/database/loginrequired.html:12
-#: homepage/templates/homepage/index.html:55 templates/base.html:110
+#: homepage/templates/homepage/index.html:60 templates/base.html:110
 msgid "Violation Database"
 msgstr "قاعدة بيانات الإنتهاكات"
 
@@ -173,16 +173,12 @@ msgid "Filter"
 msgstr "فيما يلي الخيارات المتاحة للبحث حسب"
 
 #: database/templates/database/index.html:48
-msgid "Code"
-msgstr "الكود"
+msgid "Name"
+msgstr ""
 
 #: database/templates/database/index.html:49
 msgid "Description"
 msgstr "التفاصيل"
-
-#: database/templates/database/index.html:53
-msgid "Video"
-msgstr "الفيديو"
 
 #: database/templates/database/loginrequired.html:18
 msgid "The Database is still under construction."
@@ -203,60 +199,61 @@ msgid "Incident Map"
 msgstr "خريطة الأحداث"
 
 #: homepage/templates/homepage/index.html:41 templates/base.html:9
-#: templates/base.html.py:161
+#: templates/base.html.py:165
 msgid "Syrian Archive"
 msgstr "الأرشيف السوري"
 
-#: homepage/templates/homepage/index.html:47
+#: homepage/templates/homepage/index.html:49
 msgid "Preserving documentation of human rights violations."
 msgstr "لأرشفة انتهاكات حقوق الإنسان"
 
-#: homepage/templates/homepage/index.html:48
+#: homepage/templates/homepage/index.html:52
 msgid "View map of chemical weapons attacks"
 msgstr "إظهار خريطة الهجمات بالأسلحة الكيماوية"
 
-#: homepage/templates/homepage/index.html:54 templates/base.html:106
+#: homepage/templates/homepage/index.html:59 templates/base.html:106
 msgid "About"
 msgstr "حول الأرشيف"
 
-#: homepage/templates/homepage/index.html:56 templates/base.html:114
+#: homepage/templates/homepage/index.html:61 templates/base.html:114
 msgid "Video Collections"
 msgstr "الفيديو"
 
-#: homepage/templates/homepage/index.html:57
-#: homepage/templates/homepage/index.html:129 templates/base.html:123
+#: homepage/templates/homepage/index.html:62
+#: homepage/templates/homepage/index.html:134 templates/base.html:127
 msgid "Join Us"
 msgstr "انضم  إلينا"
 
-#: homepage/templates/homepage/index.html:93
+#: homepage/templates/homepage/index.html:98
 msgid ""
 "We collaborate with organisations and media agencies that document and "
 "report human rights violations in Syria"
 msgstr ""
-"نتعاون مع منظمات المجتمع المدني والمراكز الإعلامية التي ترصد وتوثق "
-"إنتهاكات حقوق الإنسان في سوريا"
+"نتعاون مع منظمات المجتمع المدني والمراكز الإعلامية التي ترصد وتوثق إنتهاكات "
+"حقوق الإنسان في سوريا"
 
-#: homepage/templates/homepage/index.html:99
+#: homepage/templates/homepage/index.html:104
 msgid "Syrian Press Center"
 msgstr "المركز الصحفي السوري"
 
-#: homepage/templates/homepage/index.html:105
+#: homepage/templates/homepage/index.html:110
 msgid "Wadi Barada Media Center"
 msgstr "المركز الإعلامي في وادي بردى"
 
-#: homepage/templates/homepage/index.html:111
+#: homepage/templates/homepage/index.html:116
 msgid "Sounds and Picture"
 msgstr "منظمة صوت وصورة"
 
-#: homepage/templates/homepage/index.html:117
+#: homepage/templates/homepage/index.html:122
 msgid "Erbin City Coordinating Committee"
 msgstr "تنسيقية مدينة عربين"
 
-#: homepage/templates/homepage/index.html:123
+#: homepage/templates/homepage/index.html:128
 msgid "Raqqa is Being Slaughtered Silently"
 msgstr "حملة الرقة تذبح بصمت"
 
 #: page/templates/pages/blog.html:4 page/templates/pages/blog.html.py:12
+#: templates/base.html:122
 msgid "Blog"
 msgstr "مدونة"
 
@@ -287,29 +284,36 @@ msgstr "الصفحة الرئيسية"
 msgid "Syria Map"
 msgstr "خريطة الأحداث السورية"
 
-#: templates/base.html:194
+#: templates/base.html:198
 msgid "Terms of Use"
 msgstr "شروط الاستخدام"
 
-#: templates/base.html:199
+#: templates/base.html:203
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
 
-#: templates/base.html:204
+#: templates/base.html:208
 msgid "Copyright"
 msgstr "حقوق النشر"
 
-#: templates/base.html:209
+#: templates/base.html:213
 msgid "Disclaimer"
 msgstr "إخلاء المسؤولية"
 
-#: templates/base.html:214
+#: templates/base.html:218
 msgid "Contact"
 msgstr "إتصل بنا"
 
 #: templates/loginrequired.html:11
-msgid "This page is currently private and in development.  Please log in to see it."
+msgid ""
+"This page is currently private and in development.  Please log in to see it."
 msgstr "إن هذه الصفحة خاصة وقيد الإنشاء."
+
+#~ msgid "Code"
+#~ msgstr "الكود"
+
+#~ msgid "Video"
+#~ msgstr "الفيديو"
 
 #~ msgid "Search"
 #~ msgstr "ابحث"

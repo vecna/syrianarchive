@@ -23,6 +23,11 @@ This is the repository holding the django application to manage the database of 
       #mysql
       python-mysql
 
+      debian
+    libmysqlclient-dev
+    python-dev
+    binutils libproj-dev gdal-bin
+
 ## Features
 
 !["Schema"](https://raw.githubusercontent.com/nikonikoniko/syrianarchive/dev/schema.png)

@@ -14,9 +14,6 @@ from haystack.query import SearchQuerySet
 from djgeojson.views import GeoJSONLayerView
 
 
-
-
-@login_required
 def index(request):
     current_path = request.get_full_path()
 
@@ -49,7 +46,6 @@ def index(request):
 
     return render(request, 'database/index.html', {'entries': entries, 'form':form, "current_path":current_path})
 
-@login_required
 def detail(request, slug):
     incident = get_object_or_404(DatabaseEntry, pk=slug )
     geofield = incident.get_location_field()

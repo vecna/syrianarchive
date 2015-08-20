@@ -85,8 +85,9 @@ This is the repository holding the django application to manage the database of 
     python manage.py loaddata database/data/database_meta_data.json
 
     #install the pages database... hopefully the json is kept updated
-    python manage.py loaddata database/database/pages.json
-    python manage.py loaddata database/database/pages_links.json
+    python manage.py loaddata database/data/pages.json
+    python manage.py loaddata database/data/pages_links.json
+    python manage.py loaddata database/data/homepage.json
 
 
 

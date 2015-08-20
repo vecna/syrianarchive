@@ -118,6 +118,7 @@ th i.fa{
     min-height:800px;
     background-color: #ACB4AC;
     z-index: 5;
+    box-shadow: 10px -1px 5px -10px rgba(0,0,0,0.3) inset;
 
 }
 

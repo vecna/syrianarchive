@@ -68,12 +68,15 @@
 <script src="/static/js/app.js"></script>
 
 
-<link href="/static/css/main.css" rel="stylesheet" media="screen">
 {% ifequal LANGUAGE_CODE 'en' %}
+<link href="/static/css/main.css" rel="stylesheet" media="screen">
 
                     {% else %}
-<link href="/static/css/main_rtl.css" rel="stylesheet" media="screen">
 <link href="/static/bootstrap/css/bootstrap-rtl.min.css" rel="stylesheet" media="screen">
+
+<link href="/static/css/main.css" rel="stylesheet" media="screen">
+
+<link href="/static/css/main_rtl.css" rel="stylesheet" media="screen">
 
                     {% endifequal %}
 

@@ -44,7 +44,7 @@ p{
 }
 
 #filter input[type="submit"]{
-    
+
     left:1em;
 
 }
@@ -59,4 +59,20 @@ text-align: left;
 
 .controe p{
   margin-top:2em;
+}
+
+
+.sidebar{
+
+    box-shadow: -10px -1px 5px -10px rgba(0,0,0,0.3) inset;
+
+}
+
+.pagebody h3, .pagebody h4, .pagebody h2, .pagebody h5 {
+        border-left:0px solid #FA7000;
+    margin-left: 0px;
+    padding-left:0px;
+    border-right:5px solid #FA7000;
+    margin-right: -31px;
+    padding-right:28px;
 }

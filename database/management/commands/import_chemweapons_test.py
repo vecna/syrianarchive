@@ -53,7 +53,7 @@ class Command(BaseCommand):
             try:
               newdate = datetime.strptime(date, '%m/%d/%y %I:%M %p')
             except:
-              return datetime.now
+              return datetime.now()
             #newdate = datetime.strptime('Jun 1 2005  1:33PM', '%b %d %Y %I:%M%p')
             return newdate
           return datetime.now
@@ -70,7 +70,7 @@ class Command(BaseCommand):
 
 
         print BASE_PATH
-        with open( BASE_PATH + '/database/data/chemweap.csv', 'r') as f:
+        with open( BASE_PATH + '/database/data/chemweap2.csv', 'r') as f:
           reader = csv.DictReader(f, (
                 "id",
                 "location",

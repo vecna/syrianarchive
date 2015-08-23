@@ -9,7 +9,7 @@ from djgeojson.fields import PointField, PolygonField
 from django.contrib.gis.geos import GEOSGeometry
 from django.contrib.gis.geos import Point, LineString, MultiLineString
 from datetime import datetime
-
+from dateutil.parser import parse
 
 class Command(BaseCommand):
     help = "Imports locations from json file - Forein keys wont work any more -- deletes old.  for site deploy"
@@ -26,7 +26,7 @@ class Command(BaseCommand):
         notfound = []
 
         def find_location(location_string):
-          locations = LocationPlace.objects.filter(name_en__icontains=location_string)
+          locations = LocationPlace.objects.filter(name_en__icontains=location_string.strip())
           location = None
           if locations:
             location = locations[0]
@@ -47,15 +47,21 @@ class Command(BaseCommand):
           else:
               return (int(new[0])+int(new[1])/60.0+int(new[2])/3600.0) * direction[new_dir]
 
+        dates_not_parsed = []
         def parse_date(date=None):
           if date:
             #spreadsheet date format: 08/21/13 12:00 AM
             try:
-              newdate = datetime.strptime(date, '%m/%d/%y %I:%M %p')
+              print "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              newdate = datetime.strptime(date, '%d/%m/%Y %H:%M:%S')
             except:
+              print "parse no woek!! eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+              dates_not_parsed.append(date)
               return datetime.now()
             #newdate = datetime.strptime('Jun 1 2005  1:33PM', '%b %d %Y %I:%M%p')
             return newdate
+          print "nodate oooooooooooooooooooooooooooooooooooooooooooo"
+          dates_not_parsed.append(date)
           return datetime.now
 
         def find_violationtype(violation_string):
@@ -70,7 +76,7 @@ class Command(BaseCommand):
 
 
         print BASE_PATH
-        with open( BASE_PATH + '/database/data/chemweap2.csv', 'r') as f:
+        with open( BASE_PATH + '/database/data/chemweap3.csv', 'r') as f:
           reader = csv.DictReader(f, (
                 "id",
                 "location",
@@ -126,4 +132,6 @@ class Command(BaseCommand):
 
             print entry.name
           print [ loc for loc in notfound]
+          print "bad date pase ", len(dates_not_parsed)
+          print [ date for date in dates_not_parsed ]
 

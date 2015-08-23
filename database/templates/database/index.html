@@ -13,34 +13,47 @@
 		</div>
 	</div>
 
-<!-- TEST -->
- <div class="row filterrow">
- 	<div class="col-md-12 filterwrapper">
-
-
-		 <form method="get" action="/database">
-
-
-		  {{ form.errors }}
-			{{ form.non_field_errors }}
-
-			{% trans "Type of Violation" %} {{ form.type_of_violation }}
-
-			{% trans "Location" %} {{form.location}}
-
-		  {% trans "Start Date" %} {{form.startDate}}
-
-			{% trans "End Date" %} {{form.endDate}}
-
-
-		  <input type="submit" value="{% trans 'Filter' %}" />
-		  </form>
-	</div>
-</div>
-
 
 	<div class="row database-table">
-		<div class="profile">
+    <div class="col-md-3 filterrow">
+
+     <form method="get" action="/database">
+
+
+        {{ form.errors }}
+        {{ form.non_field_errors }}
+
+        <div class="filterfield">
+          <div class="filterlabel">
+            {% trans "Type of Violation" %}
+          </div>
+          {{ form.type_of_violation }}
+        </div>
+        <div class="filterfield">
+          <div class="filterlabel">
+            {% trans "Location" %}
+          </div>
+           {{form.location}}
+        </div>
+        <div class="filterfield">
+          <div class="filterlabel">
+            {% trans "Start Date" %}
+          </div>
+          {{form.startDate}}
+        </div>
+        <div class="filterfield">
+          <div class="filterlabel">
+            {% trans "End Date" %}
+          </div>
+            {{form.endDate}}
+        </div>
+
+
+        <input type="submit" class="call-to-action" value="{% trans 'Filter' %}" />
+      </form>
+
+    </div>
+		<div class="profile col-md-9  databasecol">
 
 			<table id="database" class="table table-striped " cellspacing="0" width="100%">
 			<thead>
@@ -67,7 +80,7 @@
             			{{entry.description}}
             		</td>
             		<td>
-            			{{entry.recording_date}}
+            			{{entry.recording_date|date:'d/m/Y'}}
             		</td>
             		<td>
             			{{ entry.location }}
@@ -117,5 +130,27 @@
 
 }(jQuery));
 </script>
+
+<style type="text/css">
+  .databasecol{
+    padding:0;
+    font-size:.8em;
+  }
+
+  .filterfield{
+    padding-top:1em;
+    padding-bottom:1em;
+  }
+
+  .call-to-action{
+    font-size:1.8em;
+    border-radius:1em;
+    border-style: solid;
+    padding-top: 1em
+    padding-bottom:1em;
+    text-align: center;
+  }
+
+</style>
 
 {% endblock %}

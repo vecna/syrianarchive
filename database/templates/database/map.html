@@ -5,6 +5,10 @@
 
 {% block title %}{% trans "Violation Map" %} - {% endblock %}
 
+{% block logo %}
+
+{% endblock %}
+
 
 {% block javascripts %}
   {% leaflet_js %}
@@ -18,30 +22,45 @@
   <script src="/static/components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 
   <style type="text/css">
-    div#incidents {
-        height: 500px;
+
+    html, body, .container.main, .maprow{
+      height: 100%;
     }
+    div#incidents {
+        height: 100%;
+        padding-top:50px;
+    }
+
+    .leaflet-top{
+      margin-top:50px;
+    }
+
+    .titlerow, .footer{
+      position: fixed;
+      bottom: 0;
+      background-color:transparent;
+      color:teal;
+      z-index: 5000;
+    }
+
+    .logo{
+      position: fixed;
+      bottom: 1em;
+      background-image: none;
+      background-color:transparent;
+    }
+
+    .logo h1{
+      background-color: transparent;
+      color: orange;
+    }
+
   </style>
 {% endblock %}
 
 {% block main %}
 
-  <div class="row titlerow">
-    <div class="col-md-12">
-      <h1 class="pagetitle">{% trans "Incident Map" %}</h1>
-    </div>
-  </div>
 
-<!--   <div class="row filterrow">
-    <div class="col-md-12">
-      <h4>Filter</h4>
-        {% for violation in violationtypes %}
-          <div class="violation" data-filter="{{violation}}">
-            {{ violation }}
-          </div>
-        {% endfor %}
-    </div>
-  </div> -->
 
 
     <script type="text/javascript">
@@ -78,6 +97,7 @@
 
                 // });
 
+
                 var markers = L.markerClusterGroup();
                 // Add GeoJSON layer
                 var points = L.geoJson(data, {onEachFeature: onEachFeature})
@@ -85,6 +105,7 @@
 
                 markers.addLayer(points);
                 map.addLayer(markers);
+
 
 
 
@@ -115,5 +136,17 @@
     {% leaflet_map "incidents" callback="window.map_init" %}
 
   </div>
+
+
+  <div class="row titlerow">
+    <div class="col-md-12">
+      <h1 class="pagetitle">{% trans "Incident Map" %}</h1>
+    </div>
+  </div>
+
+  <div class="logo">
+<h1>{% trans "Syrian Archive" %}</h1>
+</div>
+
 
 {% endblock %}

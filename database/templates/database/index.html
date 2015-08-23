@@ -37,13 +37,13 @@
         </div>
         <div class="filterfield">
           <div class="filterlabel">
-            {% trans "Start Date" %}
+            {% trans "From" %}
           </div>
           {{form.startDate}}
         </div>
         <div class="filterfield">
           <div class="filterlabel">
-            {% trans "End Date" %}
+            {% trans "To" %}
           </div>
             {{form.endDate}}
         </div>
@@ -165,6 +165,17 @@
     padding-bottom:1em;
     text-align: center;
   }
+
+  .select2-container, input{
+    min-width:100%;
+    background-color:teal;
+    color: white;
+    border:none;
+    font-weight: bold;
+    border-bottom:2px solid white;
+    background-color:rgba(255,255,255,.3);
+  }
+
 
 </style>
 

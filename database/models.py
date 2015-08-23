@@ -78,6 +78,11 @@ class DatabaseEntry(models.Model):
     thumbnail       = models.ImageField(upload_to="thumbnails", null = True, blank = True)
     collections     = models.ManyToManyField(Collection, blank = True)
 
+    @property
+    def videourl(self):
+      return "https://media.syrianarchive.org" + self.video_url
+
+
 
     '''
         Public Fields of the model - made for people to see

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 10:12+0000\n"
+"POT-Creation-Date: 2015-08-23 10:56+0000\n"
 "PO-Revision-Date: 2015-04-03 19:21+0000\n"
 "Last-Translator:   <sadh@fdsauh.dsa>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,8 @@ msgid "Video not Available"
 msgstr "هذا الفيديو غير متاح"
 
 #: database/templates/database/incident.html:49
-#: database/templates/database/index.html:29
-#: database/templates/database/index.html:51
+#: database/templates/database/index.html:34
+#: database/templates/database/index.html:64
 msgid "Location"
 msgstr "المحافظة"
 
@@ -56,13 +56,13 @@ msgid "Reference Code"
 msgstr "رقم الكود"
 
 #: database/templates/database/incident.html:73
-#: database/templates/database/index.html:27
-#: database/templates/database/index.html:52
+#: database/templates/database/index.html:28
+#: database/templates/database/index.html:65
 msgid "Type of Violation"
 msgstr "نوع الإنتهاك"
 
 #: database/templates/database/incident.html:80
-#: database/templates/database/index.html:50
+#: database/templates/database/index.html:63
 msgid "Recording Date"
 msgstr "تاريخ التسجيل"
 
@@ -154,29 +154,25 @@ msgstr "الأحداث المرتبطة"
 msgid "Violation Database"
 msgstr "قاعدة بيانات الإنتهاكات"
 
-#: database/templates/database/index.html:31
-#, fuzzy
-#| msgid "Start date:"
-msgid "Start Date"
-msgstr "من بداية تاريخ"
+#: database/templates/database/index.html:40
+msgid "From"
+msgstr ""
 
-#: database/templates/database/index.html:33
-#, fuzzy
-#| msgid "End date:"
-msgid "End Date"
-msgstr "إلى نهاية تاريخ"
+#: database/templates/database/index.html:46
+msgid "To"
+msgstr ""
 
-#: database/templates/database/index.html:36
+#: database/templates/database/index.html:52
 #, fuzzy
 #| msgid "Filter By"
 msgid "Filter"
 msgstr "فيما يلي الخيارات المتاحة للبحث حسب"
 
-#: database/templates/database/index.html:48
+#: database/templates/database/index.html:61
 msgid "Name"
 msgstr ""
 
-#: database/templates/database/index.html:49
+#: database/templates/database/index.html:62
 msgid "Description"
 msgstr "التفاصيل"
 
@@ -308,6 +304,16 @@ msgstr "إتصل بنا"
 msgid ""
 "This page is currently private and in development.  Please log in to see it."
 msgstr "إن هذه الصفحة خاصة وقيد الإنشاء."
+
+#, fuzzy
+#~| msgid "Start date:"
+#~ msgid "Start Date"
+#~ msgstr "من بداية تاريخ"
+
+#, fuzzy
+#~| msgid "End date:"
+#~ msgid "End Date"
+#~ msgstr "إلى نهاية تاريخ"
 
 #~ msgid "Code"
 #~ msgstr "الكود"

@@ -111,19 +111,30 @@
 		color: black;
 	}
 </style>
-<link href="/static/components/bootstrap-datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" media="screen">
-<script src="/static/components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<link href="/static/components/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" media="screen">
+{% ifequal LANGUAGE_CODE 'ar' %}
+<script src="/static/components/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/static/components/bootstrap-datepicker/locales/bootstrap-datepicker.ar.min.js"></script>
+{% else %}
+<script src="/static/components/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+{% endifequal %}
+
 
 
 <script type="text/javascript">
 (function($){
 	  $(document).ready(function(){
 		$('.datepicker').datepicker({
-	          format: 'dd M yyyy',
+	          format: 'dd/mm/yyyy',
 	          autoclose : true,
 	          todayBtn: true,
 	          closeBtn: true,
 	          weekStart: 1,
+            language: "{{ LANGUAGE_CODE }}",
+            {% ifequal LANGUAGE_CODE 'ar' %}
+            rtl: true,
+            {% endifequal %}
+
 	      });
 
 	});
@@ -132,6 +143,10 @@
 </script>
 
 <style type="text/css">
+
+.datepicker.datepicker-rtl {
+    right: auto !important;
+}
   .databasecol{
     padding:0;
     font-size:.8em;

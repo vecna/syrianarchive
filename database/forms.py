@@ -8,13 +8,13 @@ class DatabaseFilterForm(forms.ModelForm):
         required = False,
         initial = datetime.today(),
         widget = forms.DateInput(attrs={'class': 'datepicker'}),
-        input_formats = ['%d-%m-%Y','%d %b %Y',],
+        input_formats = ['%d-%m-%Y','%d/%m/%Y',],
         )
     endDate = forms.DateField(
         required = False,
         initial = datetime.today(),
         widget = forms.DateInput(attrs={'class': 'datepicker'}),
-        input_formats = ['%d-%m-%Y','%d %b %Y',],
+        input_formats = ['%d-%m-%Y','%d/%m/%Y',],
         )
     # add the fields from the models
     class Meta:

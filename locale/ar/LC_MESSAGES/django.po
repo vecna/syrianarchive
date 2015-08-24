@@ -156,11 +156,11 @@ msgstr "قاعدة بيانات الإنتهاكات"
 
 #: database/templates/database/index.html:40
 msgid "From"
-msgstr ""
+msgstr "من"
 
 #: database/templates/database/index.html:46
 msgid "To"
-msgstr ""
+msgstr "إلى"
 
 #: database/templates/database/index.html:52
 #, fuzzy
@@ -170,7 +170,7 @@ msgstr "ابحث"
 
 #: database/templates/database/index.html:61
 msgid "Name"
-msgstr ""
+msgstr "الكود"
 
 #: database/templates/database/index.html:62
 msgid "Description"

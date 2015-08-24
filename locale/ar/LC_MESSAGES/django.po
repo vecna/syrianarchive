@@ -166,7 +166,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Filter By"
 msgid "Filter"
-msgstr "فيما يلي الخيارات المتاحة للبحث حسب"
+msgstr "ابحث"
 
 #: database/templates/database/index.html:61
 msgid "Name"

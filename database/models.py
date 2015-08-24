@@ -80,7 +80,7 @@ class DatabaseEntry(models.Model):
 
     @property
     def videourl(self):
-      return "http://syriantechies.com" + self.video_url
+      return "https://media.syrianarchive.org" + self.video_url
 
 
 

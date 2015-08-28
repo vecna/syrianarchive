@@ -201,6 +201,7 @@ CKEDITOR_CONFIGS = {
         ],
         'width': '100%',
         'extraAllowedContent': 'video[*]',
+        "removePlugins": "stylesheetparser",
     }
 }
 

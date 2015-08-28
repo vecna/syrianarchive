@@ -55,6 +55,28 @@
       color: orange;
     }
 
+    .mapsidebar{
+      position: fixed;
+      height: 100%;
+      width: 25%;
+      /* overflow-y: scroll; */
+      z-index: 2000;
+      top: 0;
+      background-color: #F5F5F4;
+      right: 0;
+      padding: 1em;
+      padding-top: 4em;
+      box-shadow: 10px -1px 5px -10px rgba(0,0,0,0.3) inset;
+    }
+
+    .navbar-main{
+      z-index:6000;
+    }
+
+    .marker-cluster, .marker-cluster>div{
+      background-color: rgba(253, 156, 115, 0.6) !important;
+    }
+
   </style>
 {% endblock %}
 
@@ -134,6 +156,15 @@
   <div class="row maprow">
 
     {% leaflet_map "incidents" callback="window.map_init" %}
+
+  </div>
+
+  <div class="mapsidebar">
+
+    <h3>{% trans "Map of chemical weapons attacks in Syria" %}</h3>
+
+    <p>{% trans "Based on our current dataset, they are plotted and grouped on a map.  You can click through to watch the video and see the metadata" %}</p>
+
 
   </div>
 

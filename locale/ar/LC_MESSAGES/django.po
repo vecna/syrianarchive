@@ -194,7 +194,7 @@ msgstr "قاعدة بيانات الإنتهاكات"
 
 #: database/templates/database/map.html:164
 msgid "Map of Chemical Weapons Attacks in Syria"
-msgstr "إظهار خريطة الهجمات بالأسلحة الكيماوية"
+msgstr "خريطة تفاعليّة"
 
 #: database/templates/database/map.html:166
 msgid ""
@@ -203,9 +203,9 @@ msgid ""
 "Click on the map to see the geolocation of the attacks and get details on "
 "each incident."
 msgstr ""
-"خريطة تفاعلية توثق استخدام السلاح الكيماوي في سوريا.تعتمد هذه الخريطة على "
-"الأدلة البصرية الني سجّلها المراسلون الميدانيونوالنشطاء لتوثيق الإنتهاكات."
-"اضغط على نقاط الخريطة لمشاهدة مكان الإنتهاك والتفاصيل"
+"توثّق الخريطة استخدام السلاح الكيماوي في سوريا. تعتمد على الأدلّة البصرية التي"
+"سجّلها المراسلون الميدانيون والنشطاء لتوثيق الإنتهاكات."
+"اضغط على نقاط الخريطة لمشاهدة مكان الإنتهاك والتفاصيل."
 
 #: database/templates/database/map.html:168
 #: homepage/templates/homepage/index.html:53

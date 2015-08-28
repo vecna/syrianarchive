@@ -3,7 +3,14 @@
     min-height:95%;
 }
 
-
+.pressrelease{
+    color: #FA7000;
+    font-size: .6em;
+    margin: 0;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    margin-top: -1em;
+}
 
 .aboutrow, .collaboratorrow{
   font-size: 1.4em;

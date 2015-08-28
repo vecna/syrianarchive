@@ -193,13 +193,14 @@ CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'Custom',
         'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline', 'Image', 'Table'],
+            ['Bold', 'Italic', 'Underline', 'Image', 'Video', 'Table'],
             ['Format'],
             ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
             ['Link', 'Unlink'],
             ['RemoveFormat', 'Source']
         ],
         'width': '100%',
+        'extraAllowedContent': 'video[*]',
     }
 }
 

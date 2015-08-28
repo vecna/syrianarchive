@@ -163,8 +163,6 @@ msgid "To"
 msgstr "إلى"
 
 #: database/templates/database/index.html:52
-#, fuzzy
-#| msgid "Filter By"
 msgid "Filter"
 msgstr "ابحث"
 
@@ -321,9 +319,6 @@ msgstr "إن هذه الصفحة خاصة وقيد الإنشاء."
 
 #~ msgid "Video"
 #~ msgstr "الفيديو"
-
-#~ msgid "Search"
-#~ msgstr "ابحث"
 
 #~ msgid "Page"
 #~ msgstr "الصفحة"

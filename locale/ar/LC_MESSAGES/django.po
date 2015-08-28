@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-28 09:14+0000\n"
+"POT-Creation-Date: 2015-08-28 17:20+0000\n"
 "PO-Revision-Date: 2015-04-03 19:21+0000\n"
 "Last-Translator:   <sadh@fdsauh.dsa>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -150,7 +150,7 @@ msgstr "الأحداث المرتبطة"
 #: database/templates/database/index.html:12
 #: database/templates/database/loginrequired.html:4
 #: database/templates/database/loginrequired.html:12
-#: homepage/templates/homepage/index.html:61 templates/base.html:110
+#: homepage/templates/homepage/index.html:61 templates/base.html:106
 msgid "Violation Database"
 msgstr "قاعدة بيانات الإنتهاكات"
 
@@ -188,13 +188,33 @@ msgstr "الرجاء تسجيل الدخول"
 msgid "Violation Map"
 msgstr "قاعدة بيانات الإنتهاكات"
 
-#: database/templates/database/map.html:143
+#: database/templates/database/map.html:164
+msgid "Map of Chemical Weapons Attacks in Syria"
+msgstr "إظهار خريطة الهجمات بالأسلحة الكيماوية"
+
+#: database/templates/database/map.html:166
+msgid ""
+"This is an interactive map documenting the use of chemical weapons in Syria. "
+"It's based on video evidence recorded by citizen reporters and activists. "
+"Click on the map to see the geolocation of the attacks and get details on "
+"each incident."
+msgstr "خريطة تفاعلية توثق استخدام السلاح الكيماوي في سوريا."
+"تعتمد هذه الخريطة على الأدلة البصرية الني سجّلها المراسلون الميدانيون"
+"والنشطاء لتوثيق الإنتهاكات."
+"اضغط على نقاط الخريطة لمشاهدة مكان الإنتهاك والتفاصيل"
+
+#: database/templates/database/map.html:168
+#: homepage/templates/homepage/index.html:53
+msgid "Press Release"
+msgstr "بيان صحفي"
+
+#: database/templates/database/map.html:176
 msgid "Incident Map"
 msgstr "خريطة الأحداث"
 
-#: database/templates/database/map.html:148
+#: database/templates/database/map.html:181
 #: homepage/templates/homepage/index.html:41 templates/base.html:9
-#: templates/base.html.py:165
+#: templates/base.html.py:161
 msgid "Syrian Archive"
 msgstr "الأرشيف السوري"
 
@@ -206,20 +226,16 @@ msgstr "لأرشفة انتهاكات حقوق الإنسان"
 msgid "View map of chemical weapons attacks"
 msgstr "إظهار خريطة الهجمات بالأسلحة الكيماوية"
 
-#: homepage/templates/homepage/index.html:53
-msgid "Press Release"
-msgstr "بيان صحفي"
-
-#: homepage/templates/homepage/index.html:60 templates/base.html:106
+#: homepage/templates/homepage/index.html:60 templates/base.html:102
 msgid "About"
 msgstr "حول الأرشيف"
 
-#: homepage/templates/homepage/index.html:62 templates/base.html:114
+#: homepage/templates/homepage/index.html:62 templates/base.html:110
 msgid "Video Collections"
 msgstr "الفيديو"
 
 #: homepage/templates/homepage/index.html:63
-#: homepage/templates/homepage/index.html:135 templates/base.html:127
+#: homepage/templates/homepage/index.html:135 templates/base.html:123
 msgid "Join Us"
 msgstr "انضم  إلينا"
 
@@ -252,7 +268,7 @@ msgid "Raqqa is Being Slaughtered Silently"
 msgstr "حملة الرقة تذبح بصمت"
 
 #: page/templates/pages/blog.html:4 page/templates/pages/blog.html.py:12
-#: templates/base.html:122
+#: templates/base.html:118
 msgid "Blog"
 msgstr "مدونة"
 
@@ -275,31 +291,31 @@ msgid ""
 "Preserving open source documentation of human rights violations in Syria."
 msgstr "لأرشفة انتهاكات حقوق الإنسان"
 
-#: templates/base.html:102
+#: templates/base.html:98
 msgid "Home"
 msgstr "الصفحة الرئيسية"
 
-#: templates/base.html:118
+#: templates/base.html:114
 msgid "Syria Map"
 msgstr "خريطة الأحداث السورية"
 
-#: templates/base.html:198
+#: templates/base.html:194
 msgid "Terms of Use"
 msgstr "شروط الاستخدام"
 
-#: templates/base.html:203
+#: templates/base.html:199
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
 
-#: templates/base.html:208
+#: templates/base.html:204
 msgid "Copyright"
 msgstr "حقوق النشر"
 
-#: templates/base.html:213
+#: templates/base.html:209
 msgid "Disclaimer"
 msgstr "إخلاء المسؤولية"
 
-#: templates/base.html:218
+#: templates/base.html:214
 msgid "Contact"
 msgstr "إتصل بنا"
 

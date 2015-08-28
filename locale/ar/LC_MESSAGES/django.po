@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-24 16:32+0000\n"
+"POT-Creation-Date: 2015-08-28 09:14+0000\n"
 "PO-Revision-Date: 2015-04-03 19:21+0000\n"
 "Last-Translator:   <sadh@fdsauh.dsa>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -150,7 +150,7 @@ msgstr "الأحداث المرتبطة"
 #: database/templates/database/index.html:12
 #: database/templates/database/loginrequired.html:4
 #: database/templates/database/loginrequired.html:12
-#: homepage/templates/homepage/index.html:60 templates/base.html:110
+#: homepage/templates/homepage/index.html:61 templates/base.html:110
 msgid "Violation Database"
 msgstr "قاعدة بيانات الإنتهاكات"
 
@@ -206,20 +206,24 @@ msgstr "لأرشفة انتهاكات حقوق الإنسان"
 msgid "View map of chemical weapons attacks"
 msgstr "إظهار خريطة الهجمات بالأسلحة الكيماوية"
 
-#: homepage/templates/homepage/index.html:59 templates/base.html:106
+#: homepage/templates/homepage/index.html:53
+msgid "Press Release"
+msgstr "بيان صحفي"
+
+#: homepage/templates/homepage/index.html:60 templates/base.html:106
 msgid "About"
 msgstr "حول الأرشيف"
 
-#: homepage/templates/homepage/index.html:61 templates/base.html:114
+#: homepage/templates/homepage/index.html:62 templates/base.html:114
 msgid "Video Collections"
 msgstr "الفيديو"
 
-#: homepage/templates/homepage/index.html:62
-#: homepage/templates/homepage/index.html:134 templates/base.html:127
+#: homepage/templates/homepage/index.html:63
+#: homepage/templates/homepage/index.html:135 templates/base.html:127
 msgid "Join Us"
 msgstr "انضم  إلينا"
 
-#: homepage/templates/homepage/index.html:98
+#: homepage/templates/homepage/index.html:99
 msgid ""
 "We collaborate with organisations and media agencies that document and "
 "report human rights violations in Syria"
@@ -227,23 +231,23 @@ msgstr ""
 "نتعاون مع منظمات المجتمع المدني والمراكز الإعلامية التي ترصد وتوثق إنتهاكات "
 "حقوق الإنسان في سوريا"
 
-#: homepage/templates/homepage/index.html:104
+#: homepage/templates/homepage/index.html:105
 msgid "Syrian Press Center"
 msgstr "المركز الصحفي السوري"
 
-#: homepage/templates/homepage/index.html:110
+#: homepage/templates/homepage/index.html:111
 msgid "Wadi Barada Media Center"
 msgstr "المركز الإعلامي في وادي بردى"
 
-#: homepage/templates/homepage/index.html:116
+#: homepage/templates/homepage/index.html:117
 msgid "Sounds and Picture"
 msgstr "منظمة صوت وصورة"
 
-#: homepage/templates/homepage/index.html:122
+#: homepage/templates/homepage/index.html:123
 msgid "Erbin City Coordinating Committee"
 msgstr "تنسيقية مدينة عربين"
 
-#: homepage/templates/homepage/index.html:128
+#: homepage/templates/homepage/index.html:129
 msgid "Raqqa is Being Slaughtered Silently"
 msgstr "حملة الرقة تذبح بصمت"
 

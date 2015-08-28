@@ -7,6 +7,7 @@ import time
 from django.db.models.signals import post_save
 from djgeojson.fields import PointField, PolygonField
 import json
+from django.utils.translation import ugettext as _
 
 
 class InternationalInstrument(models.Model):
@@ -193,6 +194,7 @@ class DatabaseEntry(models.Model):
         <br />
         <strong><small>%(violation)s</small></strong>
         <p>%(description)s</p>
+        <a href="/database/%(id)s" target="_blank">%(watch)s</a>
       </div>
         ''' % {
         'id':self.pk,
@@ -200,6 +202,7 @@ class DatabaseEntry(models.Model):
         'recording_date':self.recording_date,
         'description':self.description,
         'violation':self.type_of_violation,
+        'watch': _("watch"),
         }
       return htmlcontent
 

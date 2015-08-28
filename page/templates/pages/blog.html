@@ -17,10 +17,17 @@
      <div class="row bodyrow">
         <div class="col-md-8">
            {% for blog in blog_posts %}
+           <div class="blogwrapper">
             <a href="{% url 'blog_detail' blog.url %}" title="{{ blog.title }}">
+              {% if blog.main_image %}
+                <img class="mainimage" src="{{ blog.main_image.url }}" width="200px" height="auto" />
+              {% endif %}
                 <h2>{{ blog.title }}</h2>
+
             </a>
             <p> {{ blog.short_description|safe }}</p>
+            </div>
+            <hr>
             {% endfor %}
         </div>
     </div>
@@ -38,6 +45,20 @@
   // using jQuery
   $('video,audio').mediaelementplayer(/* Options */);
   </script>
+
+  <style type="text/css">
+  .bodyrow{
+    padding:1em;
+  }
+
+  .mainimage{
+    float:right;
+  }
+
+  .blogwrapper{
+    overflow:hidden;
+  }
+  </style>
 
 
   {% endblock %}

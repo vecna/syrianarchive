@@ -35,3 +35,18 @@
 
 {% endblock %}
 
+
+
+{% block javascripts %}
+
+  <script src="/static/mediaelement/mediaelement-and-player.min.js"></script>
+  <link rel="stylesheet" href="/static/mediaelement/mediaelementplayer.css" />
+  <script>
+  // using jQuery
+  console.log("suuuuuppp");
+  $('video,audio').mediaelementplayer(/* Options */);
+  </script>
+
+
+  {% endblock %}
+

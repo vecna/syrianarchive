@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-28 17:20+0000\n"
+"POT-Creation-Date: 2015-08-28 17:39+0000\n"
 "PO-Revision-Date: 2015-04-03 19:21+0000\n"
 "Last-Translator:   <sadh@fdsauh.dsa>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Translated-Using: django-rosetta 0.7.5\n"
+
+#: database/models.py:205
+msgid "watch"
+msgstr ""
 
 #: database/templates/database/collections.html:4
 #: database/templates/database/collections.html:34
@@ -198,9 +202,9 @@ msgid ""
 "It's based on video evidence recorded by citizen reporters and activists. "
 "Click on the map to see the geolocation of the attacks and get details on "
 "each incident."
-msgstr "خريطة تفاعلية توثق استخدام السلاح الكيماوي في سوريا."
-"تعتمد هذه الخريطة على الأدلة البصرية الني سجّلها المراسلون الميدانيون"
-"والنشطاء لتوثيق الإنتهاكات."
+msgstr ""
+"خريطة تفاعلية توثق استخدام السلاح الكيماوي في سوريا.تعتمد هذه الخريطة على "
+"الأدلة البصرية الني سجّلها المراسلون الميدانيونوالنشطاء لتوثيق الإنتهاكات."
 "اضغط على نقاط الخريطة لمشاهدة مكان الإنتهاك والتفاصيل"
 
 #: database/templates/database/map.html:168

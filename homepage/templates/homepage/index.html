@@ -96,7 +96,8 @@
 
   <div class="row latestincidentrow">
     <div class="col-md-8">
-      <h2>{% trans "Latest Incidents Preserved" %}</h2>
+      <h2>{% trans "Total Incidents Preserved " %} : {{totalincidents}}</h2>
+      <h3>{% trans "Latest Incidents Preserved" %}</h3>
         <table class="table table-striped " cellspacing="0" width="100%">
           {% for incident in incidents %}
             <tr>
@@ -105,6 +106,7 @@
               <td>{{ incident.recording_date|date:'d/m/Y' }}</td>
               <td>{{ incident.location }}</td>
               <td>{{ incident.type_of_violation }}</td>
+
             </tr>
           {% endfor %}
 

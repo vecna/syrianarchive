@@ -101,7 +101,7 @@
         <table class="table table-striped " cellspacing="0" width="100%">
           {% for incident in incidents %}
             <tr>
-              <td><a href="/database/{{indicent.id}}">{{ incident.name }}</a></td>
+              <td><a href="/database/{{incident.id}}">{{ incident.name }}</a></td>
               <td>{{ incident.description }}</td>
               <td>{{ incident.recording_date|date:'d/m/Y' }}</td>
               <td>{{ incident.location }}</td>

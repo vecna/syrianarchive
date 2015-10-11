@@ -94,6 +94,34 @@
 	</div>
 
 
+  <div class="row latestincidentrow">
+    <div class="col-md-8">
+      <h2>{% trans "Latest Incidents Preserved" %}</h2>
+        <table class="table table-striped " cellspacing="0" width="100%">
+          {% for incident in incidents %}
+            <tr>
+              <td><a href="/database/{{indicent.id}}">{{ incident.name }}</a></td>
+              <td>{{ incident.description }}</td>
+              <td>{{ incident.recording_date|date:'d/m/Y' }}</td>
+              <td>{{ incident.location }}</td>
+              <td>{{ incident.type_of_violation }}</td>
+            </tr>
+          {% endfor %}
+
+        </table>
+    </div>
+    <div class="col-md-4">
+      <h3>{% trans "Blog" %}</h3>
+        <ul>
+          {% for blog in blog_posts %}
+            <li><a href="#">{{ blog.name }}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+  </div>
+
+
+
     <div class="collaboratorrow row">
         <div class="col-md-12 collaboratetitle">
             <h2>{% trans "We collaborate with organisations and media agencies that document and report human rights violations in Syria" %}</h2>

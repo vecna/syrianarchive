@@ -44,6 +44,8 @@ def index(request):
         entries = DatabaseEntry.objects.all()
         form = DatabaseFilterForm(request.GET, request.FILES)
 
+    entries = entries.order_by('-recording_date')
+
     return render(request, 'database/index.html', {'entries': entries, 'form':form, "current_path":current_path})
 
 def detail(request, slug):

@@ -114,7 +114,7 @@
       <h3>{% trans "Blog" %}</h3>
         <ul>
           {% for blog in blog_posts %}
-            <li><a href="#">{{ blog.name }}</a></li>
+            <li><a href="/p/blog/{{blog.slug}}">{{ blog.title }}</a></li>
           {% endfor %}
         </ul>
     </div>

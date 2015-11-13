@@ -126,6 +126,19 @@ th i.fa{
     padding: 1em;
 }
 
+.pagebody p {
+    max-width: 40em;
+    padding: 1em;
+    line-height: 1.8em;
+    color: #222;
+    font-size: 18px;
+}
+
+.pagebody img, video{
+  border:10px solid white;
+  box-shadow: 1px 1px 1px #eee;
+}
+
 .linkedpages li{
     font-weight: bold;
     list-style: none;

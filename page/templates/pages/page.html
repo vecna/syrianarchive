@@ -21,6 +21,7 @@
             </div>
         </div>
          <div class="col-md-4 sidebar">
+            {% if linked_pages %}
             <h3>{% trans "Related Pages" %}</h3>
             <ul class="linkedpages">
              {% for linked_page in linked_pages %}
@@ -28,6 +29,7 @@
                         {{linked_page.title}}
                     </a></li>
              {% endfor %}
+             {% endif %}
             </ul>
         </div>
     </div>

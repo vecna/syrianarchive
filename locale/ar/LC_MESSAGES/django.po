@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-13 12:17+0000\n"
+"POT-Creation-Date: 2015-11-13 12:39+0000\n"
 "PO-Revision-Date: 2015-04-03 19:21+0000\n"
 "Last-Translator:   <sadh@fdsauh.dsa>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -244,8 +244,7 @@ msgstr "حول الأرشيف"
 msgid "Video Collections"
 msgstr "الفيديو"
 
-#: homepage/templates/homepage/index.html:63
-#: homepage/templates/homepage/index.html:165 templates/base.html:123
+#: homepage/templates/homepage/index.html:63 templates/base.html:123
 msgid "Join Us"
 msgstr "انضم  إلينا"
 
@@ -291,6 +290,12 @@ msgstr "تنسيقية مدينة عربين"
 #: homepage/templates/homepage/index.html:159
 msgid "Raqqa is Being Slaughtered Silently"
 msgstr "حملة الرقة تذبح بصمت"
+
+#: homepage/templates/homepage/index.html:165
+#, fuzzy
+#| msgid "Wadi Barada Media Center"
+msgid "Al Maarra Now Media Center"
+msgstr "المركز الإعلامي في وادي بردى"
 
 #: page/templates/pages/page.html:25
 msgid "Related Pages"

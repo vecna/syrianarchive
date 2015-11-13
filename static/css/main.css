@@ -134,9 +134,10 @@ th i.fa{
     font-size: 18px;
 }
 
-.pagebody img, video{
+.pagebody img{
   border:10px solid white;
   box-shadow: 1px 1px 1px #eee;
+  max-width:100%;
 }
 
 .linkedpages li{

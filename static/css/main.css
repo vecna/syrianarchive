@@ -139,6 +139,13 @@ th i.fa{
   box-shadow: 1px 1px 1px #eee;
   max-width:100%;
 }
+.mejs-container {
+    max-width: 100% !important;
+    margin-left: -2.3em !important;
+}
+
+
+
 
 .linkedpages li{
     font-weight: bold;

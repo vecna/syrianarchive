@@ -14,5 +14,5 @@ from dateutil.parser import parse
 class Command(BaseCommand):
   def handle(self, *args, **options):
     for row in LocationPlace.objects.all()[::-1]:
-        if LocationPlace.objects.filter(name=row.name).count() > 1:
+        if LocationPlace.objects.filter(name_ar=row.name_ar).count() > 1:
             row.delete()

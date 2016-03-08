@@ -71,6 +71,8 @@ class Collection(models.Model):
       return self.name
 
 class DatabaseEntry(models.Model):
+    reference_code                 = models.CharField( max_length = 250, unique=True, null=False, blank=False)
+
     '''
         video fields
     '''
@@ -96,8 +98,7 @@ class DatabaseEntry(models.Model):
         ('FA','Persian'),
     )
 
-    name                           = models.CharField( max_length = 250)
-    reference_code                 = models.CharField( max_length = 250, null = True, blank = True)
+    name                           = models.CharField( max_length = 250, null = True, blank = True)
     cloths_and_uniforms            = models.CharField( max_length = 250, null = True, blank = True)
     description                    = models.TextField( max_length = 5000, null = True, blank = True, default = '')
     recording_date                 = models.DateTimeField(default = datetime.now, null = True, blank = True)

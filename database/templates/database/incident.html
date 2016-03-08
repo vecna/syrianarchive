@@ -33,7 +33,6 @@
 <div class="row incidentbody">
 
 	<div class="col-md-6"  style="overflow:hidden;">
-  {% if user.is_authenticated %}
     {% if incident.video_url != None %}
       <video src="{{incident.videourl}}" width="100%" height="500px"></video>
 
@@ -41,9 +40,6 @@
         <div class="section">
             {% trans "Video not Available" %}
         </div>
-    {% endif %}
-    {% else %}
-      <h3> {% trans "Video only if logged in" %}
     {% endif %}
 
 

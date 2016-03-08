@@ -20,9 +20,9 @@ class CollectionAdmin(TranslationAdmin):
 # class SourceConnectionAdmin(TranslationAdmin):
 # 	pass
 
-# @admin.register(LocationPlace)
-# class LocationPlaceAdmin(TranslationAdmin, LeafletGeoAdmin):
-# 	pass
+@admin.register(LocationPlace)
+class LocationPlaceAdmin(TranslationAdmin, LeafletGeoAdmin):
+	pass
 
 # @admin.register(Device)
 # class DeviceAdmin(TranslationAdmin):

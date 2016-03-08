@@ -22,7 +22,8 @@ class CollectionAdmin(TranslationAdmin):
 
 @admin.register(LocationPlace)
 class LocationPlaceAdmin(TranslationAdmin, LeafletGeoAdmin):
-	pass
+  list_filter = ['name', 'region',]
+  search_fields = ['name']
 
 # @admin.register(Device)
 # class DeviceAdmin(TranslationAdmin):

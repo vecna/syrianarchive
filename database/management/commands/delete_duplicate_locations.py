@@ -16,3 +16,5 @@ class Command(BaseCommand):
     for row in LocationPlace.objects.all()[::-1]:
         if LocationPlace.objects.filter(name_ar=row.name_ar).count() > 1:
             row.delete()
+        if LocationPlace.objects.filter(name_en=row.name_en).count() > 1:
+            row.delete()

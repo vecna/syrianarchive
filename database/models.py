@@ -30,7 +30,7 @@ class SourceConnection(models.Model):
         return self.name
 
 class LocationPlace(models.Model):
-    name        = models.CharField( max_length = 250)
+    name        = models.CharField(max_length = 250, unique=True)
     region      = models.ForeignKey("LocationPlace", null = True, blank = True)
     geom        = PointField(null = True, blank = True)
     region_geom = PolygonField(null = True, blank = True )

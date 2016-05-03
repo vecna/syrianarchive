@@ -29,9 +29,9 @@ class LocationPlaceAdmin(TranslationAdmin, LeafletGeoAdmin):
 # class DeviceAdmin(TranslationAdmin):
 #   pass
 
-# @admin.register(ViolationType)
-# class ViolationTypeAdmin(TranslationAdmin):
-#   pass
+@admin.register(ViolationType)
+class ViolationTypeAdmin(TranslationAdmin):
+  pass
 
 @admin.register(DatabaseEntry)
 class DatabaseEntryAdmin(TranslationAdmin, LeafletGeoAdmin):

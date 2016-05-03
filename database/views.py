@@ -66,15 +66,23 @@ def collection(request, id):
 
 
 class MapLayer(GeoJSONLayerView):
-
   def get_queryset(self):
-      print self.request
-      if self.request.method == "GET" and self.request.GET.items():
-        print "yea"
-      context = DatabaseEntry.objects.all()
+      vtype =   self.request.session['violation_type'] if 'violation_type' in self.request.session else None
+      print(vtype)
+      if not vtype:
+        print("eeee")
+        context = DatabaseEntry.objects.all()
+      else:
+        print("yaaaaaaaaa!")
+        context = DatabaseEntry.objects.filter(type_of_violation__id=vtype)
       return context
 
 def map(request):
-
+  print("upinhere")
+  print (request.GET)
+  if "violation_type" in request.GET:
+    request.session['violation_type'] = request.GET.get("violation_type")
+  else:
+    request.session['violation_type'] = None
   violationtypes = ViolationType.objects.all()
   return render(request, 'database/map.html',{'violationtypes':violationtypes,})

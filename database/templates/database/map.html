@@ -161,9 +161,14 @@
 
   <div class="mapsidebar pagebody">
 
+
     <h3>{% trans "Map of Attacks in Syria" %}</h3>
 
     <p>{% trans "This is an interactive map documenting the violations in Syria. It's based on video evidence recorded by citizen reporters and activists. Click on the map to see the geolocation of the attacks and get details on each incident." %}</p>
+
+    {% for violationtype in violationtypes %}
+      <li><a href="?violation_type={{violationtype.id}}">{{violationtype}}</a></li>
+    {% endfor %}
 
     <i><a class="pressrelease" href="/p/blog/CWpressrelease/">{% trans "Press Release of chemical weapons" %}</a></i>
     <i><a class="pressrelease" href="/p/blog/CWpressrelease/">{% trans "Press release of alleged civilian casualties from Russian attacks" %}</a></i>

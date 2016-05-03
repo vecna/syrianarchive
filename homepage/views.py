@@ -11,4 +11,10 @@ def index(request):
     incidents = DatabaseEntry.objects.all().order_by('-added_date',"-id")[:5]
     totalincidents = DatabaseEntry.objects.all().count()
 
-    return render(request, 'homepage/index.html', {'sections' : sections, 'blog_posts':blog_posts,'incidents':incidents,'totalincidents':totalincidents,})
+    violationtypes = ViolationType.objects.all()
+    for violation in violationtypes:
+      violation.count = violation.databaseentry_set.all().count()
+    violationtypes = list(violationtypes)
+    violationtypes.sort(key=lambda x: x.count, reverse=True)
+
+    return render(request, 'homepage/index.html', {'sections' : sections, 'blog_posts':blog_posts,'incidents':incidents,'totalincidents':totalincidents,'violationtypes':violationtypes})

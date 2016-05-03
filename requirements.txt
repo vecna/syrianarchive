@@ -12,3 +12,5 @@ django-geojson [field]==2.8.1
 django-leaflet==0.16.0
 pyyaml
 python-dateutil
+requests
+bs4

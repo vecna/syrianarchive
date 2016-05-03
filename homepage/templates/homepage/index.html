@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block breadcrumb %}
-	{{ block.super }}
+  {{ block.super }}
 {% endblock %}
 
 {% block logo %}
@@ -49,7 +49,7 @@
             <p>{% trans "Preserving documentation of human rights violations." %}</p>
             <br /><br />
             <div>
-              <a class="btn btn-default call-to-action" href="/database/map" role="button">{% trans "View map of chemical weapons attacks" %}</a><br />
+              <a class="btn btn-default call-to-action" href="/database/map" role="button">{% trans "View map of attacks" %}</a><br />
               <i><a class="pressrelease" href="/p/blog/CWpressrelease/">{% trans "Press Release" %}</a></i>
             </div>
 
@@ -77,21 +77,21 @@
 
 
 
-	<div class="row aboutrow ">
-			 <div class="col-md-9 homecol sectionscol">
+  <div class="row aboutrow ">
+       <div class="col-md-9 homecol sectionscol">
 
-				{% for section in sections %}
+        {% for section in sections %}
                 <div class="section-front">
-					<h2>{{ section.name }}</h2>
-					{{ section.description|safe }}
+          <h2>{{ section.name }}</h2>
+          {{ section.description|safe }}
                 </div>
-				{% endfor %}
+        {% endfor %}
 
-			</div>
-			<div class="col-md-3 righthomecol">
+      </div>
+      <div class="col-md-3 righthomecol">
 
-			</div>
-	</div>
+      </div>
+  </div>
 
 
   <div class="row latestincidentrow">
@@ -123,7 +123,7 @@
   </div>
 
 
-
+    <!--
     <div class="collaboratorrow row">
         <div class="col-md-12 collaboratetitle">
             <h2>{% trans "We collaborate with organisations and media agencies that document and report human rights violations in Syria" %}</h2>
@@ -168,6 +168,7 @@
         </div>
 
     </div>
+    -->
 
 
 

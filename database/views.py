@@ -85,4 +85,8 @@ def map(request):
   else:
     request.session['violation_type'] = None
   violationtypes = ViolationType.objects.all()
+  for violation in violationtypes:
+    violation.count = violation.databaseentry_set.all().count()
+  violationtypes = list(violationtypes)
+  violationtypes.sort(key=lambda x: x.count, reverse=True)
   return render(request, 'database/map.html',{'violationtypes':violationtypes,})

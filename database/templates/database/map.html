@@ -174,7 +174,9 @@
     <hr> -->
     <h4>{% trans "Filter Incidents" %}</h4>
     {% for violationtype in violationtypes %}
+      {% if violationtype.count > 0 %}
       <li><a href="?violation_type={{violationtype.id}}">{{violationtype}} ({{violationtype.count}})</a></li>
+      {% endif %}
     {% endfor %}
 
 

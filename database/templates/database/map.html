@@ -172,7 +172,7 @@
     <i><a class="pressrelease" href="/p/blog/CWpressrelease/">{% trans "Press Release of chemical weapons" %}</a></i><br />
     <i><a class="pressrelease" href="/p/blog/CWpressrelease/">{% trans "Press release of alleged civilian casualties from Russian attacks" %}</a></i>
     <hr> -->
-    <h4>{% trans "Filter Incidents" %}
+    <h4>{% trans "Filter Incidents" %}</h4>
     {% for violationtype in violationtypes %}
       <li><a href="?violation_type={{violationtype.id}}">{{violationtype}} ({{violationtype.count}})</a></li>
     {% endfor %}

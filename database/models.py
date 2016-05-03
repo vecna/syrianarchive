@@ -78,8 +78,9 @@ class DatabaseEntry(models.Model):
     '''
     video_source          = models.CharField( max_length = 250, null = True, blank = True)
     video_url             = models.CharField( max_length = 2000, null = True, blank = True)     #filename is url
-    thumbnail       = models.ImageField(upload_to="thumbnails", null = True, blank = True)
-    collections     = models.ManyToManyField(Collection, blank = True)
+    thumbnail             = models.ImageField(upload_to="thumbnails", null = True, blank = True)
+    collections           = models.ManyToManyField(Collection, blank = True)
+    youtube_id            = models.CharField( max_length = 250, null = True, blank = True)
 
     @property
     def videourl(self):

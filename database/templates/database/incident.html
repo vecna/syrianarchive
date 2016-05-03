@@ -9,12 +9,12 @@
 {% block main %}
 
 
-	<div class="row titlerow">
-		<div class="col-md-12">
-			<h1 class="pagetitle">{{incident.name}}</h1>
+  <div class="row titlerow">
+    <div class="col-md-12">
+      <h1 class="pagetitle">{{incident.name}}</h1>
 
-		</div>
-	</div>
+    </div>
+  </div>
 
 
 {% if incident.graphic_content == True %}
@@ -32,7 +32,7 @@
 
 <div class="row incidentbody">
 
-	<div class="col-md-6"  style="overflow:hidden;">
+  <div class="col-md-6"  style="overflow:hidden;">
     {% if incident.video_url != None %}
       <video src="{{incident.videourl}}" width="100%" height="500px"></video>
 
@@ -50,23 +50,23 @@
             <p><label>{% trans "Location Longitude" %}</label> {{incident.location_longitude}}</p>
         </div>
 
-	</div>
+  </div>
 
-	<div class="col-md-6">
-			{% if user.is_authenticated %}
-			<div class="section">
-				<a href="{% url 'admin:database_databaseentry_change' slug %}">edit</a>
-			</div>
-			{% endif %}
+  <div class="col-md-6">
+      {% if user.is_authenticated %}
+      <div class="section">
+        <a href="{% url 'admin:database_databaseentry_change' slug %}">edit</a>
+      </div>
+      {% endif %}
       <div class="section">
         <label>Description</label>
         <p>
           {{incident.description}}
         </p>
       </div>
-			<div class="section">
+      <div class="section">
 
-				<p><label>{% trans "Reference Code" %}</label> {{incident.reference_code}}</p>
+        <p><label>{% trans "Reference Code" %}</label> {{incident.reference_code}}</p>
 
         <p><label>{% trans "Type of Violation" %}</label>
                 {% for incidents in incident.type_of_violation.all %}
@@ -75,63 +75,66 @@
 
         </p>
 
-				<p><label>{% trans "Recording Date" %}</label> {{incident.recording_date}}</p>
+        <p><label>{% trans "Recording Date" %}</label> {{incident.recording_date}}</p>
 
         <p><label>{% trans "Source" %}</label> {{incident.acquired_from}}</p>
 
-				<p><label>{% trans "Keywords" %}</label> {{incident.keywords}}</p>
+        <p><label>{% trans "Keywords" %}</label> {{incident.keywords}}</p>
 
-			</div>
+        <p><label>{% trans "Youtube ID" %}</label> {{incident.youtube_id}}</p>
 
-			<div class="section">
 
-				<p><label>{% trans "Landmarks" %}</label> {{incident.landmarks}}</p>
-				<p><label>{% trans "Weather in Media" %}</label> {{incident.weather_in_media}}</p>
+      </div>
+
+      <div class="section">
+
+        <p><label>{% trans "Landmarks" %}</label> {{incident.landmarks}}</p>
+        <p><label>{% trans "Weather in Media" %}</label> {{incident.weather_in_media}}</p>
         <p><label>{% trans "Languages" %}</label> {{incident.languages}}</p>
 
-			</div>
+      </div>
 
-			<div class="section">
+      <div class="section">
 
-				<p><label>{% trans "Clothes and Uniforms" %}</label> {{incident.cloths_and_uniforms}}</p>
-				<p><label>{% trans "Sex" %}</label> {{incident.gender_or_sex}}</p>
-				<p><label>{% trans "Weapons Used" %}</label> {{incident.weapons_used}}</p>
-				<p><label>{% trans "Edited" %}</label> {{incident.edited}}</p>
-				<p><label>{% trans "File Size" %}</label> {{incident.file_size}}</p>
-				<p><label>{% trans "Duration" %}</label> {{incident.duration}}</p>
-				<p><label>{% trans "Device used to record" %}</label>
-		            {% for device in incident.device_used.all %}
-				      {{device}}<br>
-				    {% endfor %}</p>
-				<p><label>{% trans "Media Content Type" %}</label>
-		            {% for media in incident.media_content_type.all %}
-				      {{media}}<br>
-				      {% endfor %}
-				</p>
+        <p><label>{% trans "Clothes and Uniforms" %}</label> {{incident.cloths_and_uniforms}}</p>
+        <p><label>{% trans "Sex" %}</label> {{incident.gender_or_sex}}</p>
+        <p><label>{% trans "Weapons Used" %}</label> {{incident.weapons_used}}</p>
+        <p><label>{% trans "Edited" %}</label> {{incident.edited}}</p>
+        <p><label>{% trans "File Size" %}</label> {{incident.file_size}}</p>
+        <p><label>{% trans "Duration" %}</label> {{incident.duration}}</p>
+        <p><label>{% trans "Device used to record" %}</label>
+                {% for device in incident.device_used.all %}
+              {{device}}<br>
+            {% endfor %}</p>
+        <p><label>{% trans "Media Content Type" %}</label>
+                {% for media in incident.media_content_type.all %}
+              {{media}}<br>
+              {% endfor %}
+        </p>
 
-			</div>
+      </div>
 
-			<div class="section">
-				<p><label>{% trans "Chain of Custody Notes" %}</label> {{incident.chain_of_custody_notes_public}}</p>
-				<p><label>{% trans "Finding Aids" %}</label> {{incident.finding_aids}}</p>
+      <div class="section">
+        <p><label>{% trans "Chain of Custody Notes" %}</label> {{incident.chain_of_custody_notes_public}}</p>
+        <p><label>{% trans "Finding Aids" %}</label> {{incident.finding_aids}}</p>
 
-				<p><label>{% trans "International Instrument" %}</label>
-		            {% for instrument in incident.international_instrument.all %}
-		                {{instrument}}
-		            {% endfor %}</br></p>
-				<p><label>{% trans "International Instrument Notes" %}</label> {{incident.international_instrument_notes}}</p>
+        <p><label>{% trans "International Instrument" %}</label>
+                {% for instrument in incident.international_instrument.all %}
+                    {{instrument}}
+                {% endfor %}</br></p>
+        <p><label>{% trans "International Instrument Notes" %}</label> {{incident.international_instrument_notes}}</p>
 
-			</div>
+      </div>
 
-			<div class="section">
+      <div class="section">
 
-				<p><label>{% trans "URLs and News" %}</label> {{incident.urls_and_news}}</p>
-				<p><label>{% trans "Reliability Score" %}</label> <br />{{incident.reliability_score}}</p>
-				<p><label>{% trans "Related Incidents" %}</label>
-		            {% for incident in incident.related_incidents.all%}
-				      {{incident}}<br>
-		            {% endfor %}</p>
-			</div>
+        <p><label>{% trans "URLs and News" %}</label> {{incident.urls_and_news}}</p>
+        <p><label>{% trans "Reliability Score" %}</label> <br />{{incident.reliability_score}}</p>
+        <p><label>{% trans "Related Incidents" %}</label>
+                {% for incident in incident.related_incidents.all%}
+              {{incident}}<br>
+                {% endfor %}</p>
+      </div>
 </div>
 
 </div>
@@ -143,11 +146,11 @@
 {% leaflet_js %}
   {% leaflet_css %}
 
-	<script src="/static/mediaelement/mediaelement-and-player.min.js"></script>
-	<link rel="stylesheet" href="/static/mediaelement/mediaelementplayer.css" />
-	<script>
-	// using jQuery
-	$('video,audio').mediaelementplayer(/* Options */);
+  <script src="/static/mediaelement/mediaelement-and-player.min.js"></script>
+  <link rel="stylesheet" href="/static/mediaelement/mediaelementplayer.css" />
+  <script>
+  // using jQuery
+  $('video,audio').mediaelementplayer(/* Options */);
 
     function map_init (map, options) {
 
@@ -161,7 +164,7 @@
 
 
         }
-	</script>
+  </script>
 
   <style type="text/css">
   .incidentbody{

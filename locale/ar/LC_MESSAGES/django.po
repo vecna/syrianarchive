@@ -179,14 +179,10 @@ msgid "Please log in to see it"
 msgstr "الرجاء تسجيل الدخول"
 
 #: database/templates/database/map.html:6
-#, fuzzy
-#| msgid "Violation Database"
 msgid "Violation Map"
 msgstr "قاعدة بيانات الإنتهاكات"
 
 #: database/templates/database/map.html:166
-#, fuzzy
-#| msgid "Map of Chemical Weapons Attacks in Syria"
 msgid "Map of Attacks in Syria"
 msgstr "خريطة تفاعليّة"
 

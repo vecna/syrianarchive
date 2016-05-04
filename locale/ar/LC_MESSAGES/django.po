@@ -80,7 +80,7 @@ msgstr "الكلمات المفتاحية"
 
 #: database/templates/database/incident.html:84
 msgid "Youtube ID"
-msgstr ""
+msgstr "كود فيديو اليوتيوب"
 
 #: database/templates/database/incident.html:91
 msgid "Landmarks"
@@ -214,19 +214,19 @@ msgid ""
 "on video evidence recorded by citizen reporters and activists. Click on the "
 "map to see the geolocation of the attacks and get details on each incident."
 msgstr ""
-"توثّق الخريطة استخدام السلاح الكيماوي في سوريا. تعتمد على الأدلّة البصرية "
-"التيسجّلها المراسلون الميدانيون والنشطاء لتوثيق الإنتهاكات.اضغط على نقاط "
-"الخريطة لمشاهدة مكان الإنتهاك والتفاصيل."
+"توثّق الخريطة الإنتهاكات  في سوريا، وتعتمد على الأدلّة البصرية (الفيديوهات) "
+"التي سجّلها مراسلون ميدانيون ونشطاء حقوق الإنسان.اضغط على نقاط "
+"الخريطة لمشاهدة الموقع الجغرافي للإنتهاك والتفاصيل."
 
 #: database/templates/database/map.html:168
 #, fuzzy
 #| msgid "View map of chemical weapons attacks"
 msgid "Press Release of chemical weapons"
-msgstr "إظهار خريطة الهجمات بالأسلحة الكيماوية"
+msgstr “البيان الصحفي لاستخدام الأسلحة الكيماوية”
 
 #: database/templates/database/map.html:169
 msgid "Press release of alleged civilian casualties from Russian attacks"
-msgstr ""
+msgstr “البيان الصحفي للهجمات العسكرية الروسية على المدنيين”
 
 #: database/templates/database/map.html:177
 msgid "Incident Map"
@@ -246,7 +246,7 @@ msgstr "لأرشفة انتهاكات حقوق الإنسان"
 #, fuzzy
 #| msgid "View map of chemical weapons attacks"
 msgid "View map of attacks"
-msgstr "إظهار خريطة الهجمات بالأسلحة الكيماوية"
+msgstr "إظهار خريطة الهجمات"
 
 #: homepage/templates/homepage/index.html:53
 msgid "Press Release"
@@ -272,7 +272,7 @@ msgstr "مجموع المواد البصرية المؤرشفة"
 #, fuzzy
 #| msgid "Related Incidents"
 msgid "Latest Incidents Preserved"
-msgstr " آخر الانتهاكات المؤرشفة "
+msgstr "آخر الانتهاكات المؤرشفة"
 
 #: homepage/templates/homepage/index.html:116 page/templates/pages/blog.html:4
 #: page/templates/pages/blog.html.py:12 templates/base.html:118

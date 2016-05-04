@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-04 08:45+0000\n"
+"POT-Creation-Date: 2016-05-04 09:21+0000\n"
 "PO-Revision-Date: 2015-04-03 19:21+0000\n"
 "Last-Translator:   <sadh@fdsauh.dsa>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,80 +65,80 @@ msgstr "رقم الكود"
 msgid "Type of Violation"
 msgstr "نوع الإنتهاك"
 
-#: database/templates/database/incident.html:78
+#: database/templates/database/incident.html:75
 #: database/templates/database/index.html:63
 msgid "Recording Date"
 msgstr "تاريخ التسجيل"
 
-#: database/templates/database/incident.html:80
+#: database/templates/database/incident.html:77
 msgid "Source"
 msgstr "المصدر"
 
-#: database/templates/database/incident.html:82
+#: database/templates/database/incident.html:79
 msgid "Keywords"
 msgstr "الكلمات المفتاحية"
 
-#: database/templates/database/incident.html:84
+#: database/templates/database/incident.html:81
 msgid "Youtube ID"
 msgstr "كود فيديو اليوتيوب"
 
-#: database/templates/database/incident.html:91
+#: database/templates/database/incident.html:88
 msgid "Landmarks"
 msgstr "المعالم"
 
-#: database/templates/database/incident.html:92
+#: database/templates/database/incident.html:89
 msgid "Weather in Media"
 msgstr "الطقس"
 
-#: database/templates/database/incident.html:93
+#: database/templates/database/incident.html:90
 msgid "Languages"
 msgstr "اللغات في الفيديو"
 
-#: database/templates/database/incident.html:99
+#: database/templates/database/incident.html:96
 msgid "Clothes and Uniforms"
 msgstr "الملابس والزي الرسمي"
 
-#: database/templates/database/incident.html:100
+#: database/templates/database/incident.html:97
 msgid "Sex"
 msgstr "الجنس"
 
-#: database/templates/database/incident.html:101
+#: database/templates/database/incident.html:98
 msgid "Weapons Used"
 msgstr "السلاح المستخدم"
 
-#: database/templates/database/incident.html:102
+#: database/templates/database/incident.html:99
 msgid "Edited"
 msgstr "تم تعديل الملف"
 
-#: database/templates/database/incident.html:103
+#: database/templates/database/incident.html:100
 msgid "File Size"
 msgstr "حجم الملف"
 
-#: database/templates/database/incident.html:104
+#: database/templates/database/incident.html:101
 msgid "Device used to record"
 msgstr "الجهاز المستخدم للتسجيل"
 
-#: database/templates/database/incident.html:108
+#: database/templates/database/incident.html:105
 msgid "Media Content Type"
 msgstr "نوع محتوى الميديا"
 
-#: database/templates/database/incident.html:117
+#: database/templates/database/incident.html:114
 msgid "Chain of Custody Notes"
 msgstr "ملاحظات حول تسلسل العهدة"
 
-#: database/templates/database/incident.html:118
+#: database/templates/database/incident.html:115
 msgid "Finding Aids"
 msgstr "المواد المرتبطة"
 
-#: database/templates/database/incident.html:120
+#: database/templates/database/incident.html:117
 msgid "International Instrument"
 msgstr "الآلية القانونية"
 
-#: database/templates/database/incident.html:129
+#: database/templates/database/incident.html:126
 msgid "URLs and News"
 msgstr "أخبار وروابط"
 
-#: database/templates/database/incident.html:130
+#: database/templates/database/incident.html:127
 msgid "Related Incidents"
 msgstr "الأحداث المرتبطة"
 
@@ -182,11 +182,11 @@ msgstr "الرجاء تسجيل الدخول"
 msgid "Violation Map"
 msgstr "قاعدة بيانات الإنتهاكات"
 
-#: database/templates/database/map.html:166
+#: database/templates/database/map.html:172
 msgid "Map of Attacks in Syria"
 msgstr "خريطة تفاعليّة"
 
-#: database/templates/database/map.html:168
+#: database/templates/database/map.html:174
 msgid ""
 "This is an interactive map documenting the violations in Syria. It's based "
 "on video evidence recorded by citizen reporters and activists. Click on the "
@@ -196,23 +196,23 @@ msgstr ""
 "التي سجّلها مراسلون ميدانيون ونشطاء حقوق الإنسان.اضغط على نقاط الخريطة "
 "لمشاهدة الموقع الجغرافي للإنتهاك والتفاصيل."
 
-#: database/templates/database/map.html:172
+#: database/templates/database/map.html:178
 msgid "Press Release of chemical weapons"
 msgstr "البيان الصحفي لاستخدام الأسلحة الكيماوية"
 
-#: database/templates/database/map.html:173
+#: database/templates/database/map.html:179
 msgid "Press release of alleged civilian casualties from Russian attacks"
 msgstr "البيان الصحفي للهجمات العسكرية الروسية على المدنيين"
 
-#: database/templates/database/map.html:175
+#: database/templates/database/map.html:181
 msgid "Filter Incidents"
 msgstr "الأحداث المرتبطة"
 
-#: database/templates/database/map.html:189
+#: database/templates/database/map.html:200
 msgid "Incident Map"
 msgstr "خريطة الأحداث"
 
-#: database/templates/database/map.html:194
+#: database/templates/database/map.html:205
 #: homepage/templates/homepage/index.html:41 templates/base.html:9
 #: templates/base.html.py:161
 msgid "Syrian Archive"
@@ -247,7 +247,6 @@ msgid "Latest Incidents Preserved"
 msgstr "آخر الانتهاكات المؤرشفة"
 
 #: homepage/templates/homepage/index.html:120 page/templates/pages/blog.html:4
-#: page/templates/pages/blog.html.py:12 templates/base.html:118
 msgid "Blog"
 msgstr "مدونة"
 
@@ -283,6 +282,10 @@ msgstr "حملة الرقة تذبح بصمت"
 msgid "Al Maarra Now Media Center"
 msgstr "المركز الإعلامي في وادي بردى"
 
+#: page/templates/pages/blog.html:12 templates/base.html:118
+msgid "Investigations"
+msgstr "تحقيقات"
+
 #: page/templates/pages/page.html:25
 msgid "Related Pages"
 msgstr "الصفحات المرتبطة"
@@ -296,7 +299,8 @@ msgid "Page not found. (404)"
 msgstr "الصفحة غير موجودة"
 
 #: templates/base.html:17 templates/base.html.py:22
-msgid "Preserving open source documentation of human rights violations in Syria."
+msgid ""
+"Preserving open source documentation of human rights violations in Syria."
 msgstr "لأرشفة انتهاكات حقوق الإنسان"
 
 #: templates/base.html:98

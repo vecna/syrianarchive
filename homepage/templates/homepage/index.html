@@ -97,9 +97,9 @@
     <div class="col-md-8">
       <h2><strong>{{totalincidents}}</strong> {% trans "Total Incidents Preserved " %}</h2>
       {% for violationtype in violationtypes %}
-      {% if violationtype.count > 0 %}
-      <li>{{violationtype}} : {{violationtype.count}}</li>
-      {% endif %}
+        {% if violationtype.count > 0 %}
+          <li><a href="/database/?type_of_violation={{violationtype.id}}">{{violationtype}} : {{violationtype.count}}</a></li>
+        {% endif %}
       {% endfor %}
       <h3>{% trans "Latest Incidents Preserved" %}</h3>
         <table class="table table-striped " cellspacing="0" width="100%">

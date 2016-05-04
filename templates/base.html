@@ -81,41 +81,41 @@
 <body>
 
 
-	<div class='notifications bottom-right'></div>
+  <div class='notifications bottom-right'></div>
 
     <div class="navbar navbar-fixed-top navbar-main">
       <div class="navbar-inner">
         <div class="container ">
-               		<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-               		MENU
-					</button>
+                  <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                  MENU
+          </button>
 
-       	<div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse">
 
 
 
-        	<ul class="nav navbar-nav">
-		        <li><a href="/"><i class="fa fa-home"></i> {% trans "Home" %}</a></li>
-		    </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="/"><i class="fa fa-home"></i> {% trans "Home" %}</a></li>
+        </ul>
 
             <ul class="nav navbar-nav">
                 <li><a href="/p/page/about"><i class="fa fa-question"></i> {% trans "About" %}</a></li>
             </ul>
 
-		    <ul class="nav navbar-nav">
-		        <li><a href="/database"><i class="fa fa-database"></i> {% trans "Violation Database" %}</a></li>
-		    </ul>
+        <ul class="nav navbar-nav">
+            <li><a href="/database"><i class="fa fa-database"></i> {% trans "Violation Database" %}</a></li>
+        </ul>
 <!--
-		    <ul class="nav navbar-nav ">
-		        <li class=""><a href="/database/collections"><i class="fa fa-caret-square-o-right "></i> {% trans "Video Collections" %}</a></li>
-		    </ul> -->
+        <ul class="nav navbar-nav ">
+            <li class=""><a href="/database/collections"><i class="fa fa-caret-square-o-right "></i> {% trans "Video Collections" %}</a></li>
+        </ul> -->
 
             <ul class="nav navbar-nav">
                 <li class=""><a href="/database/map"><i class="fa fa-map-marker "></i> {% trans "Syria Map" %}</a></li>
             </ul>
 
             <ul class="nav navbar-nav">
-                <li class=""><a href="/p/blog"><i class="fa fa-newspaper-o "></i> {% trans "Blog" %}</a></li>
+                <li class=""><a href="/p/blog"><i class="fa fa-newspaper-o "></i> {% trans "Investigations" %}</a></li>
             </ul>
 
 <!--
@@ -123,36 +123,36 @@
                 <li><a href="/p/page/join"><i class="fa fa-plus-square-o"></i> {% trans "Join Us" %}</a></li>
             </ul>
  -->
-		    <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
 
-				<form action="{% url 'set_language' %}" method="post">
+        <form action="{% url 'set_language' %}" method="post">
 
-					<input name="uhuh" type="hidden" />
-			    	{% ifequal LANGUAGE_CODE 'en' %}
-			    	<select name="language" style="display:none;">
-			    		<option value="ar" selected="selected" type="hidden" >
-				    		العربيّة (ar)
-						</option>
-					</select>
-					<button  id="langswitcher"  type="submit" value="" >العربيّة (ar)</button>
-					{% else %}
-					<select name="language" style="display:none;">
-						<option value="en" selected="selected" type="hidden" >
-				    		English (en)
-						</option>
-					</select>
-					<button id="langswitcher" type="submit" value="" >English (en)</button>
-					{% endifequal %}
-					{% csrf_token %}
-				</form>
-
-
-			</ul>
+          <input name="uhuh" type="hidden" />
+            {% ifequal LANGUAGE_CODE 'en' %}
+            <select name="language" style="display:none;">
+              <option value="ar" selected="selected" type="hidden" >
+                العربيّة (ar)
+            </option>
+          </select>
+          <button  id="langswitcher"  type="submit" value="" >العربيّة (ar)</button>
+          {% else %}
+          <select name="language" style="display:none;">
+            <option value="en" selected="selected" type="hidden" >
+                English (en)
+            </option>
+          </select>
+          <button id="langswitcher" type="submit" value="" >English (en)</button>
+          {% endifequal %}
+          {% csrf_token %}
+        </form>
 
 
+      </ul>
 
-      	</div>
- 		</div>
+
+
+        </div>
+    </div>
       </div>
     </div>
 {% block logo %}
@@ -162,11 +162,11 @@
 </div>
 
 <!--
-	{% ifequal LANGUAGE_CODE 'en' %}
-		<img class="logo" src="/static/img/syarch.png" width="100%" />
-	{% else %}
-		<img class="logo" src="/static/img/arabic.png" width="100%" />
-	{% endifequal %}
+  {% ifequal LANGUAGE_CODE 'en' %}
+    <img class="logo" src="/static/img/syarch.png" width="100%" />
+  {% else %}
+    <img class="logo" src="/static/img/arabic.png" width="100%" />
+  {% endifequal %}
 -->
 {% endblock %}
 
@@ -177,9 +177,9 @@
 <div class="container main">
 
 
-		{% block main %}
+    {% block main %}
 
-		{% endblock %}
+    {% endblock %}
 
 
 </div>

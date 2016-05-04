@@ -69,10 +69,7 @@
         <p><label>{% trans "Reference Code" %}</label> {{incident.reference_code}}</p>
 
         <p><label>{% trans "Type of Violation" %}</label>
-                {% for incidents in incident.type_of_violation.all %}
-            {{incidents}}<br>
-          {% endfor %}
-
+            {{incident.type_of_violation}}<br>
         </p>
 
         <p><label>{% trans "Recording Date" %}</label> {{incident.recording_date}}</p>

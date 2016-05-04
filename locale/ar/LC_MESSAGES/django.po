@@ -191,12 +191,6 @@ msgid "Map of Attacks in Syria"
 msgstr "خريطة تفاعليّة"
 
 #: database/templates/database/map.html:168
-#, fuzzy
-#| msgid ""
-#| "This is an interactive map documenting the use of chemical weapons in "
-#| "Syria. It's based on video evidence recorded by citizen reporters and "
-#| "activists. Click on the map to see the geolocation of the attacks and get "
-#| "details on each incident."
 msgid ""
 "This is an interactive map documenting the violations in Syria. It's based "
 "on video evidence recorded by citizen reporters and activists. Click on the "

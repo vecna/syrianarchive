@@ -200,7 +200,7 @@ CKEDITOR_CONFIGS = {
             ['RemoveFormat', 'Source']
         ],
         'width': '100%',
-        'extraAllowedContent': ['video[*]','source[*]','object[*]','param[*]','script[*]'],
+        'extraAllowedContent': ['video[*]','source[*]','object[*]','param[*]','script[*]','div[*]'],
         "removePlugins": "stylesheetparser",
     }
 }

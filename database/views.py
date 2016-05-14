@@ -33,18 +33,15 @@ def index(request):
             if start_date and end_date:
                 kwargs['recording_date__range'] = (start_date, end_date)
 
-            entries = DatabaseEntry.objects.all().filter(**kwargs)
-
+            entries = DatabaseEntry.objects.filter(**kwargs).order_by('-recording_date')
 
         else:
-            entries = DatabaseEntry.objects.all()
+            entries = DatabaseEntry.objects.all().order_by('-recording_date')
             form = DatabaseFilterForm(request.GET, request.FILES)
 
     else:
-        entries = DatabaseEntry.objects.all()
+        entries = DatabaseEntry.objects.all().order_by('-recording_date')
         form = DatabaseFilterForm(request.GET, request.FILES)
-
-    entries = entries.order_by('-recording_date')
 
     entries = paginate(request, entries)
     return render(request, 'database/index.html', {'entries': entries, 'form':form, "current_path":current_path})

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load url_param %}
 
 {% block title %}{% trans "Violation Database" %} - {% endblock %}
 
@@ -7,14 +8,14 @@
 {% block main %}
 
 
-	<div class="row titlerow">
-		<div class="col-md-12">
-			<h1 class="pagetitle">{% trans "Violation Database" %}</h1>
-		</div>
-	</div>
+  <div class="row titlerow">
+    <div class="col-md-12">
+      <h1 class="pagetitle">{% trans "Violation Database" %}</h1>
+    </div>
+  </div>
 
 
-	<div class="row database-table">
+  <div class="row database-table">
     <div class="col-md-3 filterrow">
 
      <form method="get" action="/database">
@@ -53,54 +54,77 @@
       </form>
 
     </div>
-		<div class="profile col-md-9  databasecol">
+    <div class="profile col-md-9  databasecol">
 
-			<table id="database" class="table table-striped " cellspacing="0" width="100%">
-			<thead>
-				<tr>
-					<th>{% trans "Name" %}</th>
-					<th>{% trans "Description" %}</th>
-					<th>{% trans "Recording Date" %}</th>
-					<th>{% trans "Location" %}</th>
-					<th>{% trans "Type of Violation" %}</th>
-				</tr>
+      <table id="database" class="table table-striped " cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>{% trans "Name" %}</th>
+          <th>{% trans "Description" %}</th>
+          <th>{% trans "Recording Date" %}</th>
+          <th>{% trans "Location" %}</th>
+          <th>{% trans "Type of Violation" %}</th>
+        </tr>
 
-			<thead>
+      <thead>
 
-			<tbody>
-				{% for entry in entries %}
+      <tbody>
+        {% for entry in entries %}
 
 
-					<tr>
+          <tr>
 
-					<td>
-						<a href="/database/{{entry.id}}" >{{entry.name}}</a>
-					</td>
-            		<td >
+          <td>
+            <a href="/database/{{entry.id}}" >{{entry.name}}</a>
+          </td>
+                <td >
                   <div class="desc">
-            			 {{entry.description}}
+                   {{entry.description}}
                   </div>
-            		</td>
-            		<td>
-            			{{entry.recording_date|date:'d/m/Y'}}
-            		</td>
-            		<td>
-            			{{ entry.location }}
-            		</td>
+                </td>
+                <td>
+                  {{entry.recording_date|date:'d/m/Y'}}
+                </td>
+                <td>
+                  {{ entry.location }}
+                </td>
 
-            		<td>
+                <td>
                   {{ entry.type_of_violation }}
-			         </td>
+               </td>
 
 
-					</tr>
-				{% endfor %}
-			<tbody>
-			</table>
+          </tr>
+        {% endfor %}
+      <tbody>
+      </table>
 
-		</div>
-	</div>
+    </div>
+  </div>
 
+    {% block pagination %}
+      <div class="row">
+        <div class="col-md-9">
+        </div>
+        <div class="col-md-3">
+          <div class="pagination">
+            <span class="step-links">
+              {% if entries.has_previous %}
+                <a title="previous page" href="{% url_replace 'page' entries.previous_page_number %}">previous</a>
+              {% endif %}
+
+              <span class="current">
+                Page {{ entries.number }} of {{ entries.paginator.num_pages }}.
+              </span>
+
+              {% if entries.has_next %}
+                <a title="next page" href="{% url_replace 'page'  entries.next_page_number %}">next</a>
+              {% endif %}
+            </span>
+          </div>
+        </div>
+      </div>
+  {% endblock pagination %}
 {% endblock %}
 
 
@@ -108,10 +132,10 @@
 
 
 <style type="text/css">
-	input{
-		background-color: white;
-		color: black;
-	}
+  input{
+    background-color: white;
+    color: black;
+  }
 </style>
 <link href="/static/components/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" media="screen">
 {% ifequal LANGUAGE_CODE 'ar' %}
@@ -125,21 +149,21 @@
 
 <script type="text/javascript">
 (function($){
-	  $(document).ready(function(){
-		$('.datepicker').datepicker({
-	          format: 'dd/mm/yyyy',
-	          autoclose : true,
-	          todayBtn: true,
-	          closeBtn: true,
-	          weekStart: 1,
+    $(document).ready(function(){
+    $('.datepicker').datepicker({
+            format: 'dd/mm/yyyy',
+            autoclose : true,
+            todayBtn: true,
+            closeBtn: true,
+            weekStart: 1,
             language: "{{ LANGUAGE_CODE }}",
             {% ifequal LANGUAGE_CODE 'ar' %}
             rtl: true,
             {% endifequal %}
 
-	      });
+        });
 
-	});
+  });
 
 }(jQuery));
 </script>

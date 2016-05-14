@@ -12,7 +12,7 @@ from .forms import *
 import time
 from haystack.query import SearchQuerySet
 from djgeojson.views import GeoJSONLayerView
-
+from .helpers import *
 
 def index(request):
     current_path = request.get_full_path()
@@ -46,6 +46,7 @@ def index(request):
 
     entries = entries.order_by('-recording_date')
 
+    entries = paginate(request, entries)
     return render(request, 'database/index.html', {'entries': entries, 'form':form, "current_path":current_path})
 
 def detail(request, slug):

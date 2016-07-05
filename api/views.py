@@ -69,6 +69,7 @@ class Database(View):
       entry.date_of_acquisition = dateutil.parser.parse(bigdata["Download Date"])
       entry.acqired_from        = "littlefork"
       entry.staff_id            = "littlefork"
+      entry.video_url           = bigdata["link"]
 
 
       entry.name = entry.reference_code

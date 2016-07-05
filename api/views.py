@@ -5,6 +5,7 @@ import hashlib
 import uuid
 from datetime import datetime
 import dateutil.parser
+from django.utils.decorators import method_decorator
 
 from django.views.generic import View
 
@@ -31,13 +32,14 @@ def ip_authorize(view_func):
     return not_authorized()
   return authorize
 
+
 class Database(View):
 
-  @csrf_exempt
-  @ip_authorize
+  @method_decorator(csrf_exempt)
   def dispatch(self, *args, **kwargs):
     return super(Database, self).dispatch(*args, **kwargs)
 
+  @ip_authorize
   def get(self, request):
     return JsonResponse( map(lambda x:
         {
@@ -45,10 +47,7 @@ class Database(View):
         },
         Entry.objects.all()), safe=False )
 
-# //"Video ID","Video URL","Title","Description","Publishing Date","Duration","//Uploader//","Download date"
-
-# iso format
-  @csrf_exempt
+  @ip_authorize
   def post(self, request):
     bigdata = api_request_data(request)
     ha = hashlib.sha224(str(bigdata)).hexdigest()

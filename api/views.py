@@ -22,7 +22,7 @@ def api_request_data(request):
   return json.loads(request.body.decode("utf-8"))
 
 
-allowedIps = ['127.0.0.1','176.9.58.142', '2001:67c:1350:105::1c']
+allowedIps = ['127.0.0.1','176.9.58.142', '2001:67c:1350:105::1c','46.246.49.195']
 
 def ip_authorize(view_func):
   def authorize(request, *args, **kwargs):

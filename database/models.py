@@ -39,6 +39,8 @@ class LocationPlace(models.Model):
     dataset_id  = models.IntegerField( null = True , blank = True )
 
     def __unicode__(self):
+        if self.region == self:
+          return self.name
         selfidentify = self.region.name + " : " + self.name
         return selfidentify
 

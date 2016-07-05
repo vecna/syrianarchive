@@ -14,34 +14,27 @@ from haystack.query import SearchQuerySet
 from djgeojson.views import GeoJSONLayerView
 from .helpers import *
 
+from django.db.models.query import Q
+
+
 def index(request):
     current_path = request.get_full_path()
+    form = DatabaseFilterForm(request.GET, request.FILES)
+    entries = DatabaseEntry.objects.all().order_by('-recording_date')
 
     if request.method == "GET" and request.GET.items():
-        form = DatabaseFilterForm(request.GET, request.FILES)
         if form.is_valid():
             type_of_violation = form.cleaned_data['type_of_violation']
             location = form.cleaned_data['location']
             start_date = form.cleaned_data['startDate']
             end_date = form.cleaned_data['endDate']
 
-            kwargs = {}
-            if type_of_violation:
-                kwargs['type_of_violation'] = type_of_violation
-            if location:
-                kwargs['location'] = location
-            if start_date and end_date:
-                kwargs['recording_date__range'] = (start_date, end_date)
+            query = Q()
+            if type_of_violation:       query &= Q(type_of_violation = type_of_violation)
+            if location:                query &= (Q(location = location) | Q(location__region = location))
+            if start_date and end_date: query &= Q(recording_date__range = (start_date, end_date))
 
-            entries = DatabaseEntry.objects.filter(**kwargs).order_by('-recording_date')
-
-        else:
-            entries = DatabaseEntry.objects.all().order_by('-recording_date')
-            form = DatabaseFilterForm(request.GET, request.FILES)
-
-    else:
-        entries = DatabaseEntry.objects.all().order_by('-recording_date')
-        form = DatabaseFilterForm(request.GET, request.FILES)
+            entries = entries.filter(query)
 
     entries = paginate(request, entries)
     return render(request, 'database/index.html', {'entries': entries, 'form':form, "current_path":current_path})

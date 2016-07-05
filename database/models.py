@@ -83,7 +83,7 @@ class DatabaseEntry(models.Model):
     public_objects = DatabaseEntryManager()
 
     reference_code                 = models.CharField(max_length = 250, unique=True, null=False, blank=False, \
-                                                      default=str(uuid.uuid4())[:6])
+                                                      default=str(uuid.uuid4()))
     validated                      = models.BooleanField(default=True)
     initial_data_hash              = models.CharField(max_length = 500, default="")
 

@@ -51,7 +51,7 @@ class Database(View):
         Entry.objects.all()), safe=False )
 
   @ip_authorize
-  def post(self, request):
+  def put(self, request):
     bigdata = api_request_data(request)
     ha = hashlib.sha224(str(bigdata)).hexdigest()
 
@@ -63,6 +63,7 @@ class Database(View):
     try:
       entry.validated           = False
       entry.youtube_id          = bigdata["Video ID"]
+      entry.reference_code      = ha
       entry.online_link         = bigdata["Video URL"]
       entry.online_title        = bigdata["Title"]
       entry.description         = bigdata["Title"] + bigdata["Description"]

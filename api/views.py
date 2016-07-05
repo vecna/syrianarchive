@@ -24,7 +24,6 @@ def api_request_data(request):
 
 allowedIps = ['127.0.0.1', #localhoost
               '176.9.58.142', # media.syrianarchive url
-              '46.246.49.195', # ipreador url
               ]
 
 def ip_authorize(view_func):

@@ -7,6 +7,8 @@ import time
 from django.db.models.signals import post_save
 from djgeojson.fields import PointField, PolygonField
 import json
+import uuid
+
 from django.utils.translation import ugettext as _
 
 
@@ -72,8 +74,18 @@ class Collection(models.Model):
     def __unicode__(self):
       return self.name
 
+class DatabaseEntryManager(models.Manager):
+    def get_queryset(self):
+        return super(DatabaseEntryManager, self).get_queryset().filter(validated=True)
+
 class DatabaseEntry(models.Model):
-    reference_code                 = models.CharField( max_length = 250, unique=True, null=False, blank=False)
+    objects = models.Manager() # The default manager.
+    public_objects = DatabaseEntryManager()
+
+    reference_code                 = models.CharField(max_length = 250, unique=True, null=False, blank=False, \
+                                                      default=str(uuid.uuid4())[:6])
+    validated                      = models.BooleanField(default=True)
+    initial_data_hash              = models.CharField(max_length = 500, default="")
 
     '''
         video fields
@@ -101,7 +113,8 @@ class DatabaseEntry(models.Model):
         ('FA','Persian'),
     )
 
-    name                           = models.CharField( max_length = 250, null = True, blank = True)
+    name                       = models.CharField( max_length = 250, default="")
+
     cloths_and_uniforms            = models.CharField( max_length = 250, null = True, blank = True)
     description                    = models.TextField( max_length = 5000, null = True, blank = True, default = '')
     recording_date                 = models.DateTimeField(default = datetime.now, null = True, blank = True)
@@ -180,7 +193,7 @@ class DatabaseEntry(models.Model):
     creator                         = models.ForeignKey(User, null = True, blank = True)
 
     def __unicode__(self):
-        return self.name
+        return str(self.reference_code)
 
     def to_json_dict(self):
         data = {

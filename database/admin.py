@@ -39,21 +39,27 @@ class DatabaseEntryAdmin(TranslationAdmin, LeafletGeoAdmin):
         models.ManyToManyField: {'widget': CheckboxSelectMultiple},
     }
     list_filter = ['staff_id', 'type_of_violation', 'location', 'media_content_type','priority','creator','added_date']
-    list_display = ('reference_code',
-    'name',
-    'graphic_content',
+    list_display = (
+    'reference_code',
+    'validated',
+    'location',
+    'youtube_id',
+    'video_source',
     'staff_id',
     'recording_date',
     'online',
     'priority',
     )
+    readonly_fields=('initial_data_hash',)
     fieldsets = (
         ('UUID', {
             'fields': ('reference_code',
+                       'validated',
+                       'initial_data_hash',
                 )
         }),
         ('Meta Fields', {
-            'fields': ('name',
+            'fields': (
                 'description',
                 )
         }),

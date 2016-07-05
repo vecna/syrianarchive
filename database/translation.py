@@ -3,16 +3,16 @@ from database.models import *
 
 class DatabaseEntryTranslationOptions(TranslationOptions):
     fields = ('name',
-    	'description',
-    	'chain_of_custody_notes_public',
-    	'international_instrument_notes',
-    	'landmarks',
-    	'weather_in_media',
-    	'weapons_used',
-    	'urls_and_news',
+      'description',
+      'chain_of_custody_notes_public',
+      'international_instrument_notes',
+      'landmarks',
+      'weather_in_media',
+      'weapons_used',
+      'urls_and_news',
       'acquired_from',
 
-    	)
+      )
 
 class InternationalInstrumentTranslationOptions(TranslationOptions):
     fields = ('name',)

@@ -20,7 +20,7 @@ from django.db.models.query import Q
 def index(request):
     current_path = request.get_full_path()
     form = DatabaseFilterForm(request.GET, request.FILES)
-    entries = DatabaseEntry.objects.all().order_by('-recording_date')
+    entries = DatabaseEntry.public_objects.all().order_by('-recording_date')
 
     if request.method == "GET" and request.GET.items():
         if form.is_valid():
@@ -60,9 +60,9 @@ class MapLayer(GeoJSONLayerView):
   def get_queryset(self):
       vtype =   self.request.session['violation_type'] if 'violation_type' in self.request.session else None
       if not vtype:
-        context = DatabaseEntry.objects.all()
+        context = DatabaseEntry.public_objects.all()
       else:
-        context = DatabaseEntry.objects.filter(type_of_violation__id=vtype)
+        context = DatabaseEntry.public_objects.filter(type_of_violation__id=vtype)
       return context
 
 def map(request):

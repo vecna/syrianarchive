@@ -22,11 +22,11 @@ def api_request_data(request):
   return json.loads(request.body.decode("utf-8"))
 
 
-allowedIps = []
+allowedIps = ['127.0.0.1','176.9.58.142', '2001:67c:1350:105::1c']
 
 def ip_authorize(view_func):
   def authorize(request, *args, **kwargs):
-    user_ip = request.META['REMOTE_ADDR']
+    user_ip = request.META['HTTP_X_REAL_IP']
     if user_ip in allowedIps:
       return view_func(request, *args, **kwargs)
     return not_authorized()

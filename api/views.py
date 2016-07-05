@@ -22,22 +22,33 @@ def api_request_data(request):
   return json.loads(request.body.decode("utf-8"))
 
 
-allowedIps = ['127.0.0.1','176.9.58.142', '2001:67c:1350:105::1c','46.246.49.195']
+allowedIps = ['127.0.0.1','176.9.58.142', '2001:67c:1350:105::1c', '46.246.49.195',]
 
 def ip_authorize(view_func):
-  def authorize(request, *args, **kwargs):
-    user_ip = request.META['HTTP_X_REAL_IP']
+  def authorize(view, request, *args, **kwargs):
+    user_ip = request.META['HTTP_X_REAL_IP'] if 'HTTP_X_REAL_IP' in request.META else request.META['REMOTE_ADDR']
     if user_ip in allowedIps:
-      return view_func(request, *args, **kwargs)
+      return view_func(view, request, *args, **kwargs)
     return not_authorized()
   return authorize
 
 
-@csrf_exempt
-@ip_authorize
-def database(request):
+class Database(View):
 
-  if request.method == "POST":
+  @method_decorator(csrf_exempt)
+  def dispatch(self, *args, **kwargs):
+    return super(Database, self).dispatch(*args, **kwargs)
+
+  @ip_authorize
+  def get(self, request):
+    return JsonResponse( map(lambda x:
+        {
+          'name':x.name,
+        },
+        Entry.objects.all()), safe=False )
+
+  @ip_authorize
+  def post(self, request):
     bigdata = api_request_data(request)
     ha = hashlib.sha224(str(bigdata)).hexdigest()
 
@@ -57,7 +68,7 @@ def database(request):
       entry.added_date          = datetime.now()
       entry.date_of_acquisition = dateutil.parser.parse(bigdata["Download Date"])
       entry.acqired_from        = "littlefork"
-      entry.staff_id        = "littlefork"
+      entry.staff_id            = "littlefork"
 
 
       entry.name = entry.reference_code
@@ -68,10 +79,4 @@ def database(request):
       return HttpResponse("MALFORMED DATA -- NOTHING ADDED")
 
     return JsonResponse({"success":"entry added successfully"})
-  else:
-    return JsonResponse( map(lambda x:
-      {
-        'name':x.name,
-      },
-      Entry.objects.all()), safe=False )
 

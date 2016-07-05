@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url
-from . import views
+from .views import Database
 
 urlpatterns = patterns('',
-  url(r'^database/$', views.database, name='incident'),
+  url(r'^database/$', Database.as_view(), name='incident'),
 )
 

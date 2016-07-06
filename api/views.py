@@ -70,7 +70,7 @@ class Database(View):
       entry.recording_date      = dateutil.parser.parse(bigdata["Publishing Date"])
       entry.added_date          = datetime.now()
       entry.date_of_acquisition = dateutil.parser.parse(bigdata["Download Date"])
-      entry.acqired_from        = "littlefork"
+      entry.acquired_from        = "littlefork"
       entry.staff_id            = "littlefork"
       entry.video_url           = bigdata["link"]
 
